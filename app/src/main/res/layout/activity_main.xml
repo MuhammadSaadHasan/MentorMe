@@ -8,29 +8,48 @@
     android:background="@color/pale_gray"
     tools:context=".MainActivity">
 
-    <!-- Blue Background Section -->
+
+    <!-- BLUE BACKGROUND-->
     <View
         android:id="@+id/blueBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/corners"
-        app:layout_constraintTop_toBottomOf="@id/tvAppName"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivAppLogo"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="20dp" />
 
-    <!-- Application Name TextView yes-->
-    <TextView
-        android:id="@+id/tvAppName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="50sp"
-        android:textColor="@color/red"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+
+    <!-- BUBBLES IMAGE-->
+    <ImageView
+        android:id="@+id/ivBubbles"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/bubbles"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Login Title TextView-->
+    <!-- APP LOGO IMAGE-->
+    <ImageView
+        android:id="@+id/ivAppLogo"
+        android:layout_width="280dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <!--LOGIN TITLE -->
+
     <TextView
         android:id="@+id/tvLoginTitle"
         android:layout_width="wrap_content"
@@ -39,90 +58,137 @@
         android:textSize="30sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tvAppName"
+        app:layout_constraintTop_toBottomOf="@id/ivAppLogo"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="120dp"
-        android:layout_marginStart="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"/>
 
 
-
-
-
-
-    <!--
-   &lt;!&ndash; Email Label TextView &ndash;&gt;
+   <!--EMAIL TITLE -->
    <TextView
        android:id="@+id/tvEmailLabel"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:textColor="@color/white"
-       android:layout_marginStart="4dp"
+       android:textSize="17sp"
+       android:layout_marginStart="2dp"
        android:layout_marginTop="24dp"
        android:text="Email"
        app:layout_constraintStart_toStartOf="@id/tvLoginTitle"
        app:layout_constraintTop_toBottomOf="@id/tvLoginTitle" />
 
-   &lt;!&ndash; Email Input Field EditText &ndash;&gt;
-   <EditText
-       android:id="@+id/etEmail"
-       android:layout_width="0dp"
-       android:layout_height="wrap_content"
-       android:hint="Enter Email"
-       android:inputType="textEmailAddress"
-       android:background="@drawable/bg_squircle_input"
-       app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
-       app:layout_constraintStart_toStartOf="@id/tvEmailLabel"
-       app:layout_constraintEnd_toEndOf="parent"
-       android:layout_marginEnd="20dp"/>
 
 
-   &lt;!&ndash; Password Label TextView &ndash;&gt;
-   <TextView
-       android:id="@+id/tvPasswordLabel"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Password"
-       android:textColor="@color/white"
-       app:layout_constraintTop_toBottomOf="@id/etEmail"
-       app:layout_constraintStart_toStartOf="@id/etEmail"
-       android:layout_marginTop="16dp"/>
-
-   &lt;!&ndash; Password Input Field EditText &ndash;&gt;
-   <EditText
-       android:id="@+id/etPassword"
-       android:layout_width="0dp"
-       android:layout_height="wrap_content"
-       android:hint="Enter your password"
-       android:textColor="@color/white"
-       android:inputType="textPassword"
-       android:background="@drawable/bg_squircle_input"
-       app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"
-       app:layout_constraintStart_toStartOf="@id/tvPasswordLabel"
-       app:layout_constraintEnd_toEndOf="@id/etEmail"/>
-
-   &lt;!&ndash; Forgot Password Link TextView &ndash;&gt;
-   <TextView
-       android:id="@+id/tvForgotPassword"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Forgot Your Password?"
-       android:textSize="11sp"
-       android:textColor="@android:color/white"
-       app:layout_constraintBottom_toBottomOf="@id/etPassword"
-       app:layout_constraintEnd_toEndOf="@id/etPassword"
-       android:layout_marginBottom="-21dp"/>
+    <!--EMAIL INPUT FEILD-->
+  <EditText
+      android:id="@+id/etEmail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Enter Email"
+      android:textColorHint="@color/gray_tone"
+      android:textColor="@color/gray_tone"
+      android:textSize="16sp"
+      android:layout_marginTop="6dp"
+      android:layout_marginStart="29dp"
+      android:layout_marginEnd="29dp"
+      android:inputType="textEmailAddress"
+      android:background="@drawable/bg_squircle_input"
+      app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+      app:layout_constraintStart_toStartOf="@id/tvEmailLabel"
+      app:layout_constraintEnd_toEndOf="parent" />
 
 
-   &lt;!&ndash; Login Button &ndash;&gt;
-   <Button
-       android:id="@+id/btnLogin"
-       android:layout_width="210dp"
-       android:layout_height="40dp"
-       android:text="Login"
-       android:background="@drawable/bg_squircle_input"
-       app:layout_constraintTop_toBottomOf="@id/etPassword"
-       app:layout_constraintStart_toStartOf="@id/etPassword"
-       app:layout_constraintEnd_toEndOf="@id/etPassword"
-       android:layout_marginTop="40dp"/>-->
+     <!-- PASWWORD LABEL -->
+     <TextView
+         android:id="@+id/tvPasswordLabel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/white"
+         android:textSize="17sp"
+         android:layout_marginStart="2dp"
+         android:layout_marginTop="60dp"
+         android:text="Password"
+         app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+         app:layout_constraintStart_toStartOf="@id/tvEmailLabel" />
+
+
+
+    <!-- PASSWORD INPUT FIELD -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your password"
+        android:textColorHint="@color/gray_tone"
+        android:textColor="@color/gray_tone"
+        android:textSize="16sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_squircle_input"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Forgot Password Link TextView -->
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Your Password?"
+        android:textSize="13sp"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        android:layout_marginBottom="-21dp"/>
+
+
+
+      <!-- LOGIN BUTTON -->
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/btnLogin"
+         android:layout_width="210dp"
+         android:layout_height="40dp"
+         android:text="Login"
+         android:textColor="@color/tealish"
+         android:background="@drawable/bg_squircle_input"
+         app:layout_constraintTop_toBottomOf="@id/etPassword"
+         app:layout_constraintStart_toStartOf="@id/etPassword"
+         app:layout_constraintEnd_toEndOf="@id/etPassword"
+         android:layout_marginTop="40dp"/>
+
+
+    <TextView
+        android:id="@+id/tvSignUpPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Don’t have an account?"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Sign Up"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="120dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@
     <!-- Colors from the image -->
     <color name="tealish">#50C3C8</color>
     <color name="sunflower_yellow">#FFC80B</color>
-    <color name="pale_gray">#F1F4F2</color>
+    <color name="pale_gray">#DEF8F8</color>
+    <color name="gray_tone">#908D8C</color>
     <!-- White color is already defined above -->
 </resources>
