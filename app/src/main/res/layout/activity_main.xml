@@ -160,35 +160,21 @@
          app:layout_constraintTop_toBottomOf="@id/etPassword"
          app:layout_constraintStart_toStartOf="@id/etPassword"
          app:layout_constraintEnd_toEndOf="@id/etPassword"
-         android:layout_marginTop="40dp"/>
+         android:layout_marginTop="40dp" />
 
 
     <TextView
         android:id="@+id/tvSignUpPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Don’t have an account?"
+        android:text="Don’t have an account? Sign Up"
         android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tvSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="Sign Up"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="120dp"/>
 
 
 

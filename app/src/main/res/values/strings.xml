@@ -1,3 +1,114 @@
 <resources>
     <string name="app_name">mentorme</string>
+
+    <string-array name="country_array">
+        <item>Select Country</item>
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Cape Verde</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo, Democratic Republic of the</item>
+        <item>Congo, Republic of the</item>
+        <item>Costa Rica</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+    </string-array>
+
+    <string-array name="city_array">
+        <item>Select City</item>
+        <item>New York</item>
+        <item>Los Angeles</item>
+        <item>Chicago</item>
+        <item>Houston</item>
+        <item>Phoenix</item>
+        <item>Philadelphia</item>
+        <item>San Antonio</item>
+        <item>San Diego</item>
+        <item>Dallas</item>
+        <item>San Jose</item>
+        <item>Austin</item>
+        <item>Jacksonville</item>
+        <item>Fort Worth</item>
+        <item>Columbus</item>
+        <item>Charlotte</item>
+        <item>San Francisco</item>
+        <item>Indianapolis</item>
+        <item>Seattle</item>
+        <item>Denver</item>
+        <item>Washington</item>
+        <item>Boston</item>
+        <item>El Paso</item>
+        <item>Nashville</item>
+        <item>Detroit</item>
+        <item>Oklahoma City</item>
+        <item>Portland</item>
+        <item>Las Vegas</item>
+        <item>Memphis</item>
+        <item>Louisville</item>
+        <item>Baltimore</item>
+        <item>Milwaukee</item>
+        <item>Albuquerque</item>
+        <item>Tucson</item>
+        <item>Fresno</item>
+        <item>Sacramento</item>
+        <item>Kansas City</item>
+        <item>Long Beach</item>
+        <item>Mesa</item>
+        <item>Atlanta</item>
+        <item>Miami</item>
+        <item>Colorado Springs</item>
+        <item>Raleigh</item>
+        <item>Omaha</item>
+        <item>Long Beach</item>
+        <item>Virginia Beach</item>
+        <item>Oakland</item>
+        <item>Minneapolis</item>
+        <item>Tulsa</item>
+        <item>Arlington</item>
+        <item>New Orleans</item>
+        <!-- Add other cities as needed -->
+    </string-array>
+
+
+
 </resources>
