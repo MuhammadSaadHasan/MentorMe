@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="cyan">#FF00FFFF</color>
+    <color name="magenta">#FFFF00FF</color>
+    <color name="gray">#FF888888</color>
+    <color name="light_gray">#FFCCCCCC</color>
+    <color name="dark_gray">#FF444444</color>
+    <color name="orange">#FFFFA500</color>
+    <!-- Colors from the image -->
+    <color name="tealish">#50C3C8</color>
+    <color name="sunflower_yellow">#FFC80B</color>
+    <color name="pale_gray">#F1F4F2</color>
+    <!-- White color is already defined above -->
+</resources>
