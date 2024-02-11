@@ -27,6 +27,16 @@
     <string name="DontWorry">Don’t worry! It happens. Please enter the email associated with your account.</string>
     <string name="SEND">SEND</string>
     <string name="RememberYourPassword">Remember your password?</string>
+    <string name="ResetPasswordQUESTION">Reset Password?</string>
+    <string name="PleaseEnterAnewPasword">Please type a new password and re-enter the password. Type something you will remember!</string>
+    <string name="NewPassword">New Password</string>
+    <string name="EnterNewPassword">Enter New Password</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="ReenterPassword">Re-enter Password</string>
+    <string name="ResetPassword">Reset Password</string>
+    <string name="Dontwanttoresetpassword">Don’t want to reset password?</string>
+
+
 
 
 
