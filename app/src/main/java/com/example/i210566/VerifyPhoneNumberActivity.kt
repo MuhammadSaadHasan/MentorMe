@@ -2,25 +2,21 @@ package com.example.i210566
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class VerifyPhoneNumberActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_verify_phone_number)
 
 
-
-        //Redirect from sign up to GetStartedActivity
-        val textViewSignUp = findViewById<TextView>(R.id.textViewSignUp)
-        textViewSignUp.setOnClickListener {
+        val buttonBack: ImageButton = findViewById(R.id.back)
+        buttonBack.setOnClickListener {
             val intent = Intent(this, GetStartedActivity::class.java)
             startActivity(intent)
+            finish()
         }
-
-
-
 
 
     }

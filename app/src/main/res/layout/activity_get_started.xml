@@ -17,9 +17,8 @@
         android:background="@drawable/corners"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivAppLogo"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="20dp" />
-
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="16dp" />
 
     <!-- BUBBLES IMAGE-->
     <ImageView
@@ -46,262 +45,245 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <!--GetStarted TITLE -->
-
-    <TextView
-        android:id="@+id/tvGetStarted"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Started!"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/ivAppLogo"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"/>
 
 
-    <!--Name TITLE -->
-    <TextView
-        android:id="@+id/tvNameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="5dp"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="@id/tvGetStarted"
-        app:layout_constraintTop_toBottomOf="@id/tvGetStarted" />
-
-
-
-    <!--NAME INPUT FEILD-->
-    <EditText
-        android:id="@+id/etName"
+    <!-- DON'T HAVE ACCOUNT? LOG IN -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Name"
-        android:textColorHint="@color/gray_tone"
-        android:textColor="@color/gray_tone"
-        android:textSize="16sp"
-        android:layout_marginTop="3dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:inputType="textPersonName"
-        android:background="@drawable/bg_squircle_input"
-        app:layout_constraintTop_toBottomOf="@id/tvNameLabel"
-        app:layout_constraintStart_toStartOf="@id/tvNameLabel"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/textViewGetStarted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- GET STARTED LABEL -->
+            <TextView
+                android:id="@+id/GetStartedID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/GetStarted"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="165dp"
+                android:layout_marginStart="40dp"/>
+
+            <!-- NAME LABEL -->
+            <TextView
+                android:id="@+id/NameID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Name"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"/>
+
+            <!--NAME INPUT BAR-->
+            <EditText
+                android:id="@+id/NameInputID"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:hint="@string/EnterName"
+                android:textSize="16sp"
+                android:textColor="@color/gray_tone"
+                android:textColorHint="@color/gray_tone"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="40dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/bg_squircle_input" />
+
+            <!-- EMAIL LABEL -->
+            <TextView
+                android:id="@+id/EmailID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Email"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"/>
+
+            <!--EMAIL INPUT BAR-->
+            <EditText
+                android:id="@+id/EmailInputID"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:hint="@string/EnterEmail"
+                android:textSize="16sp"
+                android:textColor="@color/gray_tone"
+                android:textColorHint="@color/gray_tone"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="40dp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/bg_squircle_input" />
+
+            <!-- CONTACT NUMBER LABEL -->
+            <TextView
+                android:id="@+id/ContactNumberID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ContactNumber"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"/>
+
+            <!--CONTACT NUMBER INPUT BAR-->
+            <EditText
+                android:id="@+id/ContactNumberInputID"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:hint="@string/EnterContactNumber"
+                android:textSize="16sp"
+                android:textColor="@color/gray_tone"
+                android:textColorHint="@color/gray_tone"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="40dp"
+                android:inputType="phone"
+                android:background="@drawable/bg_squircle_input" />
+
+            <!-- COUNTRY LABEL -->
+            <TextView
+                android:id="@+id/CountryID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Country"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"/>
 
 
-    <!--EMAIL TITLE -->
-    <TextView
-        android:id="@+id/tvEmailLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="55dp"
-        android:text="Email"
-        app:layout_constraintStart_toStartOf="@id/tvNameLabel"
-        app:layout_constraintTop_toBottomOf="@id/tvNameLabel" />
+            <!-- COUNTRY SPINNER -->
+            <Spinner
+                android:id="@+id/CountrySpinnerID"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:entries="@array/country_array"
+                android:textSize="16sp"
+                android:textColor="@color/gray_tone"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/bg_squircle_input" />
 
 
-
-    <!--EMAIL INPUT FEILD-->
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Email"
-        android:textColorHint="@color/gray_tone"
-        android:textColor="@color/gray_tone"
-        android:textSize="16sp"
-        android:layout_marginTop="82dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/bg_squircle_input"
-        app:layout_constraintTop_toBottomOf="@id/tvNameLabel"
-        app:layout_constraintStart_toStartOf="@id/tvNameLabel"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- CITY LABEL -->
+            <TextView
+                android:id="@+id/CityID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/City"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"/>
 
 
-
-    <!--CONTACT TITLE -->
-    <TextView
-        android:id="@+id/tvContactLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="130dp"
-        android:text="Contact Number"
-        app:layout_constraintStart_toStartOf="@id/tvNameLabel"
-        app:layout_constraintTop_toBottomOf="@id/tvNameLabel" />
-
-    <!--Contact Number INPUT FEILD-->
-    <EditText
-        android:id="@+id/etContactNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Contact Number"
-        android:textColorHint="@color/gray_tone"
-        android:textColor="@color/gray_tone"
-        android:textSize="16sp"
-        android:layout_marginTop="157dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:inputType="number"
-        android:background="@drawable/bg_squircle_input"
-        app:layout_constraintTop_toBottomOf="@id/tvNameLabel"
-        app:layout_constraintStart_toStartOf="@id/tvNameLabel"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- CITY SPINNER -->
+            <Spinner
+                android:id="@+id/CitySpinnerID"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:entries="@array/city_array"
+                android:textSize="16sp"
+                android:textColor="@color/gray_tone"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/bg_squircle_input" />
 
 
-
-    <!--Country TITLE -->
-    <TextView
-        android:id="@+id/tvCountryLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="205dp"
-        android:text="Country"
-        app:layout_constraintStart_toStartOf="@id/tvNameLabel"
-        app:layout_constraintTop_toBottomOf="@id/tvNameLabel" />
+            <!-- PASSWORD LABEL -->
+            <TextView
+                android:id="@+id/PasswordID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Password"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"/>
 
 
-    <!--Country SPINNER-->
-    <Spinner
-        android:id="@+id/spinnerCountry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="79dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:background="@drawable/bg_squircle_input"
-        android:entries="@array/country_array"
-        app:layout_constraintTop_toBottomOf="@id/tvContactLabel"
-        app:layout_constraintStart_toStartOf="@id/tvContactLabel"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!--PASSWORD INPUT BAR-->
+            <EditText
+                android:id="@+id/PasswordInputID"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:hint="@string/EnterYourPassword"
+                android:textSize="16sp"
+                android:textColor="@color/gray_tone"
+                android:textColorHint="@color/gray_tone"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="40dp"
+                android:inputType="textPassword"
+                android:background="@drawable/bg_squircle_input" />
+
+            <!-- PASSWORD MESSAGE -->
+            <TextView
+                android:id="@+id/PasswordMessageID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PasswordMustBeAtLeast8CharactersLong"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="45dp"/>
+
+            <!-- SIGN UP BUTTON -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignUp"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="@string/SignUp"
+                android:textColor="@color/tealish"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_squircle_input" />
 
 
+        </LinearLayout>
 
-    <!--City TITLE -->
-    <TextView
-        android:id="@+id/tvCityLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="6dp"
-        android:text="City"
-        app:layout_constraintStart_toStartOf="@id/tvCountryLabel"
-        app:layout_constraintTop_toBottomOf="@id/spinnerCountry" />
-
-    <!--City SPINNER-->
-    <Spinner
-        android:id="@+id/spinnerCity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:textSize="16sp"
-        android:background="@drawable/bg_squircle_input"
-        android:entries="@array/city_array"
-        app:layout_constraintTop_toBottomOf="@id/tvCityLabel"
-        app:layout_constraintStart_toStartOf="@id/spinnerCountry"
-        app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
 
 
+        <!--DONT HAVE ACCOUNT? LOG IN -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <!-- PASWWORD LABEL -->
-    <TextView
-        android:id="@+id/tvPasswordLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="275dp"
-        android:text="Password"
-        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
-        app:layout_constraintStart_toStartOf="@id/tvEmailLabel" />
+            <LinearLayout
+                android:id="@+id/textViewContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="11dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/textViewPrompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AlreadyHaveAnAccount"
+                    android:textColor="@color/white" />
 
-
-    <!-- PASSWORD INPUT FIELD -->
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your password"
-        android:textColorHint="@color/gray_tone"
-        android:textColor="@color/gray_tone"
-        android:textSize="16sp"
-        android:layout_marginTop="3dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:inputType="textPassword"
-        android:background="@drawable/bg_squircle_input"
-        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
-    <!-- PASSWORD message TextView -->
-    <TextView
-        android:id="@+id/tvForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password must be at least 8 characters long"
-        android:textSize="13sp"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/etPassword"
-        app:layout_constraintBottom_toBottomOf="@id/etPassword"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="-21dp"/>
-
-    <!-- SIGN UP BUTTON -->
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSignUp"
-        android:layout_width="210dp"
-        android:layout_height="40dp"
-        android:text="Sign Up"
-        android:textColor="@color/tealish"
-        android:background="@drawable/bg_squircle_input"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
-        app:layout_constraintStart_toStartOf="@id/etPassword"
-        app:layout_constraintEnd_toEndOf="@id/etPassword"
-        android:layout_marginTop="30dp" />
-
-    <TextView
-        android:id="@+id/tvLoginPrompt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already have an account? Log in"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-        <!--app:layout_constraintBottom_toTopOf="@id/tvSignUpPrompt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"-->
-
+                <TextView
+                    android:id="@+id/textViewSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/Log_in"
+                    android:textColor="@color/Dark_teal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

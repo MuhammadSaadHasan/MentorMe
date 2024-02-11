@@ -17,5 +17,7 @@
     <color name="sunflower_yellow">#FFC80B</color>
     <color name="pale_gray">#DEF8F8</color>
     <color name="gray_tone">#908D8C</color>
+    <color name="transparent">#00000000</color>
+    <color name="Dark_teal">#1B7A80</color>
     <!-- White color is already defined above -->
 </resources>

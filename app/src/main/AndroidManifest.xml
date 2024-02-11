@@ -13,6 +13,9 @@
         android:theme="@style/Theme.I210566"
         tools:targetApi="31">
         <activity
+            android:name=".VerifyPhoneNumberActivity"
+            android:exported="false" />
+        <activity
             android:name=".GetStartedActivity"
             android:exported="false" />
         <activity
@@ -24,8 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

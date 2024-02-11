@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight">
+    <!-- This drawable defines the shape of the ripple -->
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="?android:attr/colorControlHighlight" />
+        </shape>
+    </item>
+    <!-- This drawable defines the background of the button -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <!-- You can customize other attributes such as corner radius, stroke, etc. -->
+            <size android:width="20dp" android:height="20dp" /> <!-- Adjust the size here -->
+            <corners android:radius="8dp" /> <!-- Adjust the corner radius here -->
+        </shape>
+    </item>
+</ripple>

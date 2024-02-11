@@ -1,5 +1,30 @@
 <resources>
-    <string name="app_name">mentorme</string>
+    <string name="app_name">Mentorme</string>
+    <string name="Login">Login</string>
+    <string name="Email">Email</string>
+    <string name="EnterEmail">Enter Email</string>
+    <string name="Password">Password</string>
+    <string name="EnterYourPassword">Enter your password</string>
+    <string name="ForgotYourPassword">Forgot Your Password?</string>
+    <string name="DontHaveAnAccount">Don\'t have an account?</string>
+    <string name="GetStarted">Get Started!</string>
+    <string name="Name">Name</string>
+    <string name="EnterName">Enter Name</string>
+    <string name="ContactNumber">Contact Number</string>
+    <string name="EnterContactNumber">Enter Contact Number</string>
+    <string name="Country">Country</string>
+    <string name="City">City</string>
+    <string name="PasswordMustBeAtLeast8CharactersLong">Password must be at least 8 characters long</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="Log_in">Log in</string>
+    <string name="AlreadyHaveAnAccount">Already have an account?</string>
+    <string name="VerifyYourPhoneNumber">Verify your phone number</string>
+    <string name="WeveSentACodEeTo923325618881">We’ve sent a code to +92 3325618881</string>
+    <string name="Verify">Verify</string>
+    <string name="SendCodAgain">Send code again</string>
+    <string name="Time0020">00:20</string>
+
+
 
     <string-array name="country_array">
         <item>Select Country</item>
@@ -108,7 +133,6 @@
         <item>New Orleans</item>
         <!-- Add other cities as needed -->
     </string-array>
-
 
 
 </resources>
