@@ -23,6 +23,10 @@
     <string name="Verify">Verify</string>
     <string name="SendCodAgain">Send code again</string>
     <string name="Time0020">00:20</string>
+    <string name="ForgotPassword">Forgot Password?</string>
+    <string name="DontWorry">Don’t worry! It happens. Please enter the email associated with your account.</string>
+    <string name="SEND">SEND</string>
+    <string name="RememberYourPassword">Remember your password?</string>
 
 
 

@@ -20,6 +20,17 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        //Redirect from forgot password to ForgotPasswordActivity
+        val ForgotPasswordID = findViewById<TextView>(R.id.ForgotPasswordID)
+        ForgotPasswordID.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
 
 
 
