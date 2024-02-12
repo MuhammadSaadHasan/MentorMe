@@ -19,5 +19,7 @@
     <color name="gray_tone">#908D8C</color>
     <color name="transparent">#00000000</color>
     <color name="Dark_teal">#1B7A80</color>
+    <color name="Medium_teal">#BDE0E2</color>
+
     <!-- White color is already defined above -->
 </resources>

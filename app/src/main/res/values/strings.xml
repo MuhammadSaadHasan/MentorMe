@@ -35,8 +35,42 @@
     <string name="ReenterPassword">Re-enter Password</string>
     <string name="ResetPassword">Reset Password</string>
     <string name="Dontwanttoresetpassword">Don’t want to reset password?</string>
+    <string name="Hello">Hello,</string>
+    <string name="Ali">Ali</string>
+    <string name="ReadyformentorshipLetsbeginthejourney">Ready for mentorship? Let’s begin the journey!</string>
+    <string name="All">All</string>
+    <string name="Education">Education</string>
+    <string name="Entrepreneurship">Entrepreneurship</string>
+    <string name="PersonalGrowth">Personal Growth</string>
+    <string name="Career">Career</string>
+    <string name="TopMentorsforyou">Top Mentors for you</string>
+    <string name="ViewAll">View All</string>
+    <string name="JohnCooper">John Cooper</string>
+    <string name="UXDesignerGoogle">UX Designer @ Google</string>
+    <string name="BulletPoint">\u2022</string>
+    <string name="Available">Available</string>
+    <string name="Session1500">$1500/Session</string>
+    <string name="MartinaWatson">Martina Watson</string>
+    <string name="LeadTechnologyOfficer">Lead - Technology Officer</string>
+    <string name="NotAvailable">Not Available</string>
+    <string name="Session500">$500/Session</string>
+    <string name="Emma">Emma</string>
+    <string name="LeadCorporate">Lead - Corporate</string>
+    <string name="EducationMentors">Education Mentors</string>
+    <string name="MichaelDrake">All</string>
+    <string name="NLPExpert">NLP Expert</string>
+    <string name="Session900">$900/Session</string>
+    <string name="Alex">Alex</string>
+    <string name="AndroidDeveloper">Android Developer</string>
+    <string name="Session200">$200/Session</string>
+    <string name="Jane">Jane</string>
+    <string name="SoftwareEngineer">Software Engineer</string>
+    <string name="Home">Home</string>
+    <string name="Search">Search</string>
+    <string name="Chat">Chat</string>
+    <string name="Profile">Profile</string>
 
-
+    <string name="RecentMentors">Recent Mentors</string>
 
 
 
