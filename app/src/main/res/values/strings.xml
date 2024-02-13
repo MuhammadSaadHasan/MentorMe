@@ -95,8 +95,6 @@ principles and user experience.</string>
     <string name="BookaSession">Book a Session</string>
 
 
-
-
     <string-array name="country_array">
         <item>Select Country</item>
         <item>Afghanistan</item>
