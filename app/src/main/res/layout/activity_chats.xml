@@ -4,6 +4,282 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DEF8F8"
     tools:context=".Chats">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            >
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:padding="10dp"
+                android:src="@drawable/back"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chats"
+                android:textSize="30sp"
+                android:textColor="@color/Dark_teal"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Mycommunity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Community"
+            android:textSize="12sp"
+            android:textColor="@color/Dark_teal"
+            android:textStyle="bold"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="24dp"/>
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/pe1" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/p2" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/p3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/p4" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/p5" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/p1" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/allmessages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Messages"
+                android:textSize="12sp"
+                android:textColor="@color/Dark_teal"
+                android:textStyle="bold"
+                android:layout_marginTop="230dp"
+                android:layout_marginStart="24dp"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewID"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/p1wy"
+                    android:layout_marginTop="20dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/johncooper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/JohnCooper"
+                        android:layout_toEndOf="@id/imageViewID"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="100dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/Newmessage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 New Message"
+                        android:layout_toEndOf="@id/imageViewID"
+                        android:layout_marginStart="100dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#B13031" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewID2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/p2wy"
+                    android:layout_marginTop="20dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/jackwatson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jack Watson"
+                        android:layout_toEndOf="@id/imageViewID"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="100dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/nonewmessage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No New Message"
+                        android:layout_toEndOf="@id/imageViewID"
+                        android:layout_marginStart="100dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray_tone" />
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewID3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/p3wy"
+                    android:layout_marginTop="20dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/EmmaPhilips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emma Philips"
+                        android:layout_toEndOf="@id/imageViewID"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="100dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/nonewmessage3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No New Message"
+                        android:layout_toEndOf="@id/imageViewID"
+                        android:layout_marginStart="100dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray_tone" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
