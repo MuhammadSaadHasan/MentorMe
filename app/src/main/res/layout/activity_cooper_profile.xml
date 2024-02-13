@@ -208,6 +208,8 @@
                 android:text="@string/JoinCommunity"
                 android:textStyle="bold"
                 android:textColor="@color/Dark_teal" />
+
+
         </LinearLayout>
 
 
