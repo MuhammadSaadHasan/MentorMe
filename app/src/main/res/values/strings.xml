@@ -77,22 +77,22 @@
     <string name="Mentor3">Mentor 3</string>
     <string name="BrowseCategories">Browse Categories</string>
 
+    <string name="HIjohncooper">Hi, I’m John Cooper</string>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <string name="UX">UX Designer at Google</string>
+    <string name="Aboutme">About me</string>
+    <string name="Iampassionate">I am a passionate UX designer at Google with a focus on
+creating user-centric and intuitive interfaces. With 10 years of
+experience, I have had the opportunity to work on diverse
+projects that have shaped my understanding of design
+principles and user experience.</string>
+    <string name="MyExpertise">My Expertise Include</string>
+    <string name="CareerAdvice">Career Advice</string>
+    <string name="UserExperience">User Experience</string>
+    <string name="Leadership">Leadership</string>
+    <string name="Dropreview">Drop a review</string>
+    <string name="JoinCommunity">Join Community</string>
+    <string name="BookaSession">Book a Session</string>
 
 
 
