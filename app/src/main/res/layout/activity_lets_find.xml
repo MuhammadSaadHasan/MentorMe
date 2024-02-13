@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_gray"
+    tools:context=".LetsFindActivity">
+
+    <!-- BUBBLES IMAGE-->
+    <ImageView
+        android:id="@+id/ivBubbles"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/bubbles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Light Blue Background -->
+    <View
+        android:id="@+id/blueBackground"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/light_blue_flat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="50dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp">
+
+            <!-- letts find -->
+            <TextView
+                android:id="@+id/LetsFindID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LetsFind"
+                android:textSize="30sp"
+                android:textColor="@color/Dark_teal"
+                android:textStyle="bold"
+                android:layout_marginTop="100dp"/>
+
+            <!-- SEARCHBAR LABEL -->
+            <EditText
+                android:id="@+id/searchBarID"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:hint="@string/Search"
+                android:inputType="text"
+                android:background="@drawable/search_bar_background"
+                android:drawableStart="@drawable/drawable_start_search"
+                android:drawablePadding="10dp"
+                android:paddingStart="16dp"
+            android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:id="@+id/textViewPrompt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/EducationMentors"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/Dark_teal" />
+
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Recent1ID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Mentor1"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/XIcon"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/drwable_end_xx"
+                    android:background="@color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="16dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Recent2ID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Mentor2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/XIcon2"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/drwable_end_xx"
+                    android:background="@color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="16dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Recent3ID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Mentor3"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/XIcon3"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/drwable_end_xx"
+                    android:background="@color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="16dp" />
+
+            </RelativeLayout>
+
+            <!-- letts find -->
+            <TextView
+                android:id="@+id/BrowawCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/BrowseCategories"
+                android:textSize="25sp"
+                android:textColor="@color/Dark_teal"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewID"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/entreprenurship"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/EntreprnurshipID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Entrepreneurship"
+                    android:layout_toEndOf="@id/imageViewID"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="13dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+
+                <ImageButton
+                    android:id="@+id/ArrowIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/arrows"
+                    android:background="@color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="5dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewI2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/persnal_growth"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/personalgoehID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PersonalGrowth"
+                    android:layout_toEndOf="@id/imageViewI2"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="13dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+
+                <ImageButton
+                    android:id="@+id/ArrowIcon2"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/arrows"
+                    android:background="@color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="5dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewI3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/education"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/EducationtextID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PersonalGrowth"
+                    android:layout_toEndOf="@id/imageViewI3"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="13dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+
+                <ImageButton
+                    android:id="@+id/ArrowIcon3"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/arrows"
+                    android:background="@color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="5dp" />
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/Dark_teal"
+        app:itemIconTint="@color/white"
+        app:itemActiveIndicatorStyle="@color/transparent"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
