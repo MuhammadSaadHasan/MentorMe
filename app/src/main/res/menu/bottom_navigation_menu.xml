@@ -13,6 +13,11 @@
         android:title="@string/Search"/>
 
     <item
+        android:id="@+id/nav_plus"
+        android:icon="@drawable/plus"
+        android:title="Add" />
+
+    <item
         android:id="@+id/nav_chat"
         android:icon="@drawable/chat"
         android:title="@string/Chat" />
@@ -21,4 +26,6 @@
         android:id="@+id/nav_profile"
         android:icon="@drawable/profile"
         android:title="@string/Profile" />
+
+
 </menu>

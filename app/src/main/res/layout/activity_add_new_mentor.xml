@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEF8F8"
+    tools:context=".AddNewMentor">
+
+
+        <!-- BUBBLES IMAGE-->
+        <ImageView
+            android:id="@+id/ivBubbles"
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/bubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/blueBackground"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:background="@drawable/corners"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/textViewForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- FORGOT PASSWORD -->
+                <TextView
+                    android:id="@+id/addnewmentor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Mentor"
+                    android:textSize="30sp"
+                    android:textColor="@color/Dark_teal"
+                    android:textStyle="bold"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginStart="40dp"/>
+
+                <TextView
+                    android:id="@+id/helpusexpand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Help us expand!"
+                    android:textSize="16sp"
+                    android:textColor="@color/Dark_teal"
+                    android:textStyle=""
+                    android:layout_marginStart="150dp"/>
+
+
+
+            </LinearLayout>
+
+           <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="230dp">
+
+                    <ImageButton
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/uploadvideo"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/uploadvideo" />
+
+                    <ImageButton
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/uploadphoto"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/uploadphoto" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                   android:id="@+id/textViewGetStarted"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                       <!-- EMAIL LABEL -->
+                       <TextView
+                           android:id="@+id/NameID"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/Name"
+                           android:textSize="16sp"
+                           android:textColor="@color/white"
+                           android:layout_marginTop="350dp"
+                           android:layout_marginStart="40dp"/>
+
+                       <!--EMAIL INPUT BAR-->
+                       <EditText
+                           android:id="@+id/NameInputID"
+                           android:layout_width="280dp"
+                           android:layout_height="40dp"
+                           android:hint="@string/EnterName"
+                           android:textSize="16sp"
+                           android:textColor="@color/gray_tone"
+                           android:textColorHint="@color/gray_tone"
+                           android:layout_marginTop="3dp"
+                           android:layout_marginStart="40dp"
+                           android:inputType="textPersonName"
+                           android:background="@drawable/bg_squircle_input" />
+
+                       <TextView
+                           android:id="@+id/descriptionID"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Description"
+                           android:textSize="16sp"
+                           android:textColor="@color/white"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="40dp"/>
+
+                       <EditText
+                           android:id="@+id/ContactNumberInputID"
+                           android:layout_width="280dp"
+                           android:layout_height="40dp"
+                           android:hint="Enter Description"
+                           android:textSize="16sp"
+                           android:textColor="@color/gray_tone"
+                           android:textColorHint="@color/gray_tone"
+                           android:layout_marginTop="3dp"
+                           android:layout_marginStart="40dp"
+                           android:inputType="phone"
+                           android:background="@drawable/bg_squircle_input" />
+
+                       <TextView
+                           android:id="@+id/CityID"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/City"
+                           android:textSize="16sp"
+                           android:textColor="@color/white"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="40dp"/>
+
+
+                       <Spinner
+                           android:id="@+id/status"
+                           android:layout_width="280dp"
+                           android:layout_height="40dp"
+                           android:entries="@array/status_array"
+                           android:textSize="16sp"
+                           android:textColor="@color/gray_tone"
+                           android:layout_marginTop="3dp"
+                           android:layout_marginStart="40dp"
+                           android:background="@drawable/bg_squircle_input" />
+
+                    </LinearLayout>
+
+
+
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/BookAnappointment"
+                   android:layout_width="310dp"
+                   android:layout_height="50dp"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="610dp"
+                   android:background="@drawable/verify_button_bg_squircle_input"
+                   android:text="Book an Appointment"
+                   android:textColor="@color/white" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

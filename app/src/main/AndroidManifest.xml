@@ -13,6 +13,12 @@
         android:theme="@style/Theme.I210566"
         tools:targetApi="31">
         <activity
+            android:name=".Chats"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewMentor"
+            android:exported="false" />
+        <activity
             android:name=".BookSession"
             android:exported="false" />
         <activity

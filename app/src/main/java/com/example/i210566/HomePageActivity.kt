@@ -19,6 +19,22 @@ class HomePageActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+
+
+                R.id.nav_plus -> {
+                    val intent = Intent(this, AddNewMentor::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.nav_chat -> {
+                    val intent = Intent(this, Chats::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+
+
                 else -> false
             }
         }

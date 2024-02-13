@@ -204,4 +204,10 @@ principles and user experience.</string>
     </string-array>
 
 
+    <string-array name="status_array">
+        <item>Availabley</item>
+        <item>Not Available</item>
+    </string-array>
+
+
 </resources>
