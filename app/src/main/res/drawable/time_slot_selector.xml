@@ -1,0 +1,18 @@
+<!-- res/drawable/time_slot_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/selected_color" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/unselected_color" />
+            <corners android:radius="10dp" />
+            <stroke android:color="@color/selected_color" android:width="2dp" />
+        </shape>
+    </item>
+</selector>

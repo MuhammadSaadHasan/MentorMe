@@ -21,5 +21,12 @@
     <color name="Dark_teal">#1B7A80</color>
     <color name="Medium_teal">#BDE0E2</color>
 
-    <!-- White color is already defined above -->
+    <color name="calendar_header">@color/green</color>
+    <color name="calendar_header_text">@color/black</color>
+    <color name="calendar_date_text">@color/black</color>
+    <color name="calendar_selected_date_background">@color/Dark_teal</color>
+    <!-- res/values/colors.xml -->
+    <color name="selected_color">#0B8FAC</color> <!-- The highlight color for the selected button -->
+    <color name="unselected_color">#DCEEEE</color> <!-- The color for unselected buttons -->
+
 </resources>

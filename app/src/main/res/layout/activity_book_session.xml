@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/another_light_blue_flat"
+    tools:context=".BookSession">
+
+
+
+    <!-- BLUE BACKGROUND-->
+    <View
+        android:id="@+id/blueBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="500dp"
+        android:background="@drawable/corners_from_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="18dp">
+
+            <TextView
+                android:id="@+id/hiJohncooperid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/JohnCooper"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="137dp"
+                android:layout_height="150dp"
+                android:src="@drawable/cooperpfp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="18dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.8"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="180dp"
+            android:layout_marginStart="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Session1500"
+                android:textSize="25sp"
+                android:textColor="#FFC90A"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp" />
+
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle_bakcground"
+                android:scaleType="centerInside"
+                android:src="@drawable/message" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle_bakcground"
+                android:scaleType="centerInside"
+                android:src="@drawable/voicecall" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle_bakcground"
+                android:scaleType="centerInside"
+                android:src="@drawable/videocall" />
+        </LinearLayout>
+
+
+
+
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="230dp"
+            style="@style/CustomCalendarView"/>
+
+
+
+
+
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Time Slots"
+                android:layout_marginTop="530dp"
+                android:textSize="25sp"
+
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"/>
+
+            <!-- Container for the time slots -->
+            <RadioGroup
+                android:id="@+id/timeSlotsGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp">
+
+                <RadioButton
+                    android:id="@+id/timeSlot10AM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10.00 AM"
+                    android:button="@null"
+                    android:background="@drawable/time_slot_selector"
+                    android:padding="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@drawable/time_slot_text_selector" />
+
+                <RadioButton
+                    android:id="@+id/timeSlot11AM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11.00 AM"
+                    android:button="@null"
+                    android:background="@drawable/time_slot_selector"
+                    android:padding="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@drawable/time_slot_text_selector" />
+
+                <RadioButton
+                    android:id="@+id/timeSlot12PM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12.00 PM"
+                    android:button="@null"
+                    android:background="@drawable/time_slot_selector"
+                    android:padding="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@drawable/time_slot_text_selector" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BookAnappointment"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="650dp"
+            android:background="@drawable/verify_button_bg_squircle_input"
+            android:text="Book an Appointment"
+            android:textColor="@color/white" />
+
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        ...
+    </style>
+
+    <style name="CustomCalendarView">
+        <item name="colorAccent">@color/calendar_header</item>
+        <item name="android:weekDayTextAppearance">@style/CustomWeekDayTextAppearance</item>
+        <item name="android:dateTextAppearance">@style/CustomDateTextAppearance</item>
+    </style>
+
+    <style name="CustomWeekDayTextAppearance" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/calendar_header_text</item>
+    </style>
+
+    <style name="CustomDateTextAppearance" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/calendar_date_text</item>
+        <!-- You can customize the text size and style here as well -->
+    </style>
+
+
+    <!-- Week day text appearance -->
+    <style name="WeekDayTextAppearance" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/calendar_date_text</item>
+    </style>
+
+    <!-- Date text appearance -->
+    <style name="DateTextAppearance" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/calendar_date_text</item>
+    </style>
+</resources>
