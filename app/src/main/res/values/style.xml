@@ -30,4 +30,5 @@
     <style name="DateTextAppearance" parent="TextAppearance.AppCompat.Small">
         <item name="android:textColor">@color/calendar_date_text</item>
     </style>
+
 </resources>
