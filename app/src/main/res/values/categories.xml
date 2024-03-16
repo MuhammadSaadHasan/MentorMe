@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="AllButtonID" type="id"/>
+    <item name="EducationButtonID" type="id"/>
+    <item name="EntrepreneurshipButtonID" type="id"/>
+    <item name="PersonalGrowthButtonID" type="id"/>
+    <item name="CareerID" type="id"/>
+
+
+</resources>

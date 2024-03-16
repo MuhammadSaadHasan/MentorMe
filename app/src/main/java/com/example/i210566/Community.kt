@@ -12,35 +12,17 @@ class Community : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.setOnItemSelectedListener { item ->
+            var intent: Intent? = null
             when (item.itemId) {
-                R.id.nav_search -> {
-                    val intent = Intent(this, LetsFindActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-
-                R.id.nav_plus -> {
-                    val intent = Intent(this, AddNewMentor::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-                R.id.nav_chat -> {
-                    val intent = Intent(this, Chats::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-                R.id.nav_home -> {
-                    val intent = Intent(this, HomePageActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-
-                else -> false
+                R.id.nav_search -> intent = Intent(this, LetsFindActivity::class.java)
+                R.id.nav_plus -> intent = Intent(this, AddNewMentor::class.java)
+                R.id.nav_chat -> intent = Intent(this, Chats::class.java)
+                R.id.nav_home -> intent = Intent(this, HomePageActivity::class.java)
             }
+            intent?.let {
+                startActivity(it)
+                true
+            } ?: false
         }
 
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/MentorCard">
+
+    <View
+        android:id="@+id/Mentor1"
+        style="@style/MentorImage" />
+
+    <ImageView
+        android:id="@+id/ivHeartIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="115dp"
+        android:src="@drawable/grey_heart" />
+
+    <TextView
+        android:id="@+id/tvMentorSessionRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="100dp"
+        android:text="Session Rate"
+        android:textColor="#ECCF5D"
+        android:textSize="6sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="95dp"
+        android:orientation="vertical"
+        style="@style/MentorDetailsContainer">
+
+        <TextView
+            android:id="@+id/tvMentorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvMentorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@android:color/black"
+            android:textSize="8sp"
+            android:gravity="end" />
+
+        <!-- Add the Availability Indicator and text here as per your design -->
+
+    </LinearLayout>
+
+    <!-- Other views as required -->
+
+</FrameLayout>

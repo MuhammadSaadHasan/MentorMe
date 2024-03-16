@@ -71,9 +71,103 @@
         <item name="labelVisibilityMode">labeled</item>
     </style>
 
+    <!-- Add a new style for your TextViews. -->
+    <style name="TopMentorsTextView" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_teal</item>
+    </style>
+
+    <style name="ViewAllTextView" parent="TopMentorsTextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+
+    <!-- Style for FrameLayout -->
+    <style name="MentorCard">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="MentorNameText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="MentorTitleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <style name="AvailabilityText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#3EAC01</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <!-- Style for the main mentor image -->
+    <style name="MentorImage">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:background">@drawable/square_shape</item>
+    </style>
+
+    <!-- Style for the heart icon -->
+    <style name="HeartIcon">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:background">@drawable/grey_heart</item>
+        <item name="android:layout_marginStart">115dp</item>
+        <item name="android:layout_marginTop">115dp</item>
+    </style>
+
+    <!-- Style for the mentor details container -->
+    <style name="MentorDetailsContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginStart">17dp</item>
+        <item name="android:layout_marginTop">95dp</item>
+    </style>
+
+    <!-- Style for the availability indicator -->
+    <style name="AvailabilityIndicator">
+        <item name="android:layout_width">5dp</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:background">@drawable/green_circle_shape</item>
+    </style>
 
 
 
 
+    <!-- Style for the session rate text -->
+    <style name="SessionRateText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ECCF5D</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">95dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+    </style>
 
 </resources>
+
+
