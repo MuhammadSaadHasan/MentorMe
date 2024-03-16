@@ -20,7 +20,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <View
             android:id="@+id/blueBackground"
             android:layout_width="match_parent"
@@ -28,21 +27,16 @@
             android:background="@drawable/corners"
             app:layout_constraintBottom_toBottomOf="parent" />
 
-
-
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/textViewForgotPassword"
+                android:id="@+id/TopTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
-                <!-- FORGOT PASSWORD -->
                 <TextView
                     android:id="@+id/addnewmentor"
                     android:layout_width="wrap_content"
@@ -65,7 +59,6 @@
                     android:layout_marginStart="150dp"/>
 
 
-
             </LinearLayout>
 
            <RelativeLayout
@@ -77,9 +70,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="230dp">
+                    android:layout_marginTop="210dp">
 
                     <ImageButton
+                        android:id="@+id/uploadVideoButton"
                         android:layout_width="150dp"
                         android:layout_height="90dp"
                         android:background="@drawable/uploadvideo"
@@ -87,6 +81,7 @@
                         android:src="@drawable/uploadvideo" />
 
                     <ImageButton
+                        android:id="@+id/uploadPhotoButton"
                         android:layout_width="150dp"
                         android:layout_height="90dp"
                         android:layout_marginStart="20dp"
@@ -96,128 +91,80 @@
                 </LinearLayout>
 
 
-                <LinearLayout
+               <LinearLayout
                    android:id="@+id/textViewGetStarted"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:orientation="vertical">
+                   android:orientation="vertical"
+                   android:layout_marginTop="300dp">
 
-                       <!-- EMAIL LABEL -->
-                       <TextView
-                           android:id="@+id/NameID"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="@string/Name"
-                           android:textSize="16sp"
-                           android:textColor="@color/white"
-                           android:layout_marginTop="350dp"
-                           android:layout_marginStart="40dp"/>
+                   <TextView
+                       android:id="@+id/NameID"
+                       style="@style/MyWidgetTextView"
+                       android:text="@string/Name"/>
 
-                       <!--EMAIL INPUT BAR-->
-                       <EditText
-                           android:id="@+id/NameInputID"
-                           android:layout_width="280dp"
-                           android:layout_height="40dp"
-                           android:hint="@string/EnterName"
-                           android:textSize="16sp"
-                           android:textColor="@color/gray_tone"
-                           android:textColorHint="@color/gray_tone"
-                           android:layout_marginTop="3dp"
-                           android:layout_marginStart="40dp"
-                           android:inputType="textPersonName"
-                           android:background="@drawable/bg_squircle_input" />
+                   <EditText
+                       android:id="@+id/NameInputID"
+                       style="@style/MyWidgetEditText"
+                       android:hint="@string/EnterName"
+                       android:inputType="textPersonName"/>
 
-                       <TextView
-                           android:id="@+id/descriptionID"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="Description"
-                           android:textSize="16sp"
-                           android:textColor="@color/white"
-                           android:layout_marginTop="10dp"
-                           android:layout_marginStart="40dp"/>
+                   <TextView
+                       android:id="@+id/DescriptionID"
+                       style="@style/MyWidgetTextView"
+                       android:text="Description"/>
 
-                       <EditText
-                           android:id="@+id/ContactNumberInputID"
-                           android:layout_width="280dp"
-                           android:layout_height="40dp"
-                           android:hint="Enter Description"
-                           android:textSize="16sp"
-                           android:textColor="@color/gray_tone"
-                           android:textColorHint="@color/gray_tone"
-                           android:layout_marginTop="3dp"
-                           android:layout_marginStart="40dp"
-                           android:inputType="phone"
-                           android:background="@drawable/bg_squircle_input" />
+                   <EditText
+                       android:id="@+id/DescriptionInputID"
+                       style="@style/MyWidgetEditText"
+                       android:hint="Enter Description"
+                       android:inputType="textLongMessage"/>
 
-                       <TextView
-                           android:id="@+id/CityID"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="@string/City"
-                           android:textSize="16sp"
-                           android:textColor="@color/white"
-                           android:layout_marginTop="10dp"
-                           android:layout_marginStart="40dp"/>
+                   <TextView
+                       android:id="@+id/StatusID"
+                       style="@style/MyWidgetTextView"
+                       android:text="Status"/>
 
+                   <Spinner
+                       android:id="@+id/status"
+                       style="@style/MyWidgetSpinner"/>
 
-                       <Spinner
-                           android:id="@+id/status"
-                           android:layout_width="280dp"
-                           android:layout_height="40dp"
-                           android:entries="@array/status_array"
-                           android:textSize="16sp"
-                           android:textColor="@color/gray_tone"
-                           android:layout_marginTop="3dp"
-                           android:layout_marginStart="40dp"
-                           android:background="@drawable/bg_squircle_input" />
+                   <TextView
+                       android:id="@+id/priceLabelID"
+                       style="@style/MyWidgetTextView"
+                       android:text="Price"/>
 
-                    </LinearLayout>
+                   <EditText
+                       android:id="@+id/priceInputID"
+                       style="@style/MyWidgetEditText"
+                       android:hint="Enter Price"
+                       android:inputType="numberDecimal"/>
 
-
+               </LinearLayout>
 
 
                <androidx.appcompat.widget.AppCompatButton
-                   android:id="@+id/BookAnappointment"
+                   android:id="@+id/UploadButton"
                    android:layout_width="310dp"
                    android:layout_height="50dp"
                    android:layout_centerHorizontal="true"
                    android:layout_marginTop="610dp"
                    android:background="@drawable/verify_button_bg_squircle_input"
-                   android:text="Book an Appointment"
+                   android:text="UPLOAD"
                    android:textColor="@color/white" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+               <ProgressBar
+                   android:id="@+id/progressBar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:visibility="gone" /> <!-- Initially hidden -->
 
 
            </RelativeLayout>
 
-
-
-
         </RelativeLayout>
-
-
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -231,4 +178,7 @@
         app:menu="@menu/bottom_navigation_menu"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

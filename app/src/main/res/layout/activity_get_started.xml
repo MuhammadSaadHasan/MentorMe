@@ -45,8 +45,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
-
     <!-- DON'T HAVE ACCOUNT? LOG IN -->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -70,156 +68,82 @@
                 android:layout_marginTop="165dp"
                 android:layout_marginStart="40dp"/>
 
+
             <!-- NAME LABEL -->
             <TextView
                 android:id="@+id/NameID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Name"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="40dp"/>
+                style="@style/MyWidgetTextView"
+                android:text="@string/Name"/>
 
-            <!--NAME INPUT BAR-->
+            <!-- NAME INPUT BAR -->
             <EditText
                 android:id="@+id/NameInputID"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
+                style="@style/MyWidgetEditText"
                 android:hint="@string/EnterName"
-                android:textSize="16sp"
-                android:textColor="@color/gray_tone"
-                android:textColorHint="@color/gray_tone"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="40dp"
-                android:inputType="textPersonName"
-                android:background="@drawable/bg_squircle_input" />
+                android:inputType="textPersonName"/>
 
             <!-- EMAIL LABEL -->
             <TextView
                 android:id="@+id/EmailID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Email"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="40dp"/>
+                style="@style/MyWidgetTextView"
+                android:text="@string/Email"/>
 
-            <!--EMAIL INPUT BAR-->
+            <!-- EMAIL INPUT BAR -->
             <EditText
                 android:id="@+id/EmailInputID"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
+                style="@style/MyWidgetEditText"
                 android:hint="@string/EnterEmail"
-                android:textSize="16sp"
-                android:textColor="@color/gray_tone"
-                android:textColorHint="@color/gray_tone"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="40dp"
-                android:inputType="textEmailAddress"
-                android:background="@drawable/bg_squircle_input" />
+                android:inputType="textEmailAddress"/>
 
             <!-- CONTACT NUMBER LABEL -->
             <TextView
                 android:id="@+id/ContactNumberID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ContactNumber"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="40dp"/>
+                style="@style/MyWidgetTextView"
+                android:text="@string/ContactNumber"/>
 
-            <!--CONTACT NUMBER INPUT BAR-->
+            <!-- CONTACT NUMBER INPUT BAR -->
             <EditText
                 android:id="@+id/ContactNumberInputID"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
+                style="@style/MyWidgetEditText"
                 android:hint="@string/EnterContactNumber"
-                android:textSize="16sp"
-                android:textColor="@color/gray_tone"
-                android:textColorHint="@color/gray_tone"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="40dp"
-                android:inputType="phone"
-                android:background="@drawable/bg_squircle_input" />
+                android:inputType="phone"/>
 
             <!-- COUNTRY LABEL -->
             <TextView
                 android:id="@+id/CountryID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Country"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="40dp"/>
-
+                style="@style/MyWidgetTextView"
+                android:text="@string/Country"/>
 
             <!-- COUNTRY SPINNER -->
             <Spinner
                 android:id="@+id/CountrySpinnerID"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
-                android:entries="@array/country_array"
-                android:textSize="16sp"
-                android:textColor="@color/gray_tone"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="40dp"
-                android:background="@drawable/bg_squircle_input" />
-
+                style="@style/MyWidgetSpinner"
+                android:entries="@array/country_array"/>
 
             <!-- CITY LABEL -->
             <TextView
                 android:id="@+id/CityID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/City"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="40dp"/>
-
+                style="@style/MyWidgetTextView"
+                android:text="@string/City"/>
 
             <!-- CITY SPINNER -->
             <Spinner
                 android:id="@+id/CitySpinnerID"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
-                android:entries="@array/city_array"
-                android:textSize="16sp"
-                android:textColor="@color/gray_tone"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="40dp"
-                android:background="@drawable/bg_squircle_input" />
-
+                style="@style/MyWidgetSpinner"
+                android:entries="@array/city_array"/>
 
             <!-- PASSWORD LABEL -->
             <TextView
                 android:id="@+id/PasswordID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Password"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="40dp"/>
+                style="@style/MyWidgetTextView"
+                android:text="@string/Password"/>
 
-
-            <!--PASSWORD INPUT BAR-->
+            <!-- PASSWORD INPUT BAR -->
             <EditText
                 android:id="@+id/PasswordInputID"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
+                style="@style/MyWidgetEditText"
                 android:hint="@string/EnterYourPassword"
-                android:textSize="16sp"
-                android:textColor="@color/gray_tone"
-                android:textColorHint="@color/gray_tone"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="40dp"
-                android:inputType="textPassword"
-                android:background="@drawable/bg_squircle_input" />
+                android:inputType="textPassword"/>
 
             <!-- PASSWORD MESSAGE -->
             <TextView

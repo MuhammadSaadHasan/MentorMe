@@ -70,54 +70,36 @@
             <!-- EMAIL LABEL -->
             <TextView
                 android:id="@+id/EmailID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/MyWidgetTextView"
                 android:text="@string/Email"
-                android:textSize="16sp"
-                android:textColor="@color/white"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="40dp"/>
 
             <!--EMAIL INPUT BAR-->
             <EditText
                 android:id="@+id/EmailInputID"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
+                style="@style/MyWidgetEditText"
                 android:hint="@string/EnterEmail"
-                android:textSize="16sp"
-                android:textColor="@color/gray_tone"
-                android:textColorHint="@color/gray_tone"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="40dp"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/bg_squircle_input" />
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="40dp" />
 
             <!-- PASSWORD LABEL -->
             <TextView
                 android:id="@+id/PasswordID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/MyWidgetTextView"
                 android:text="@string/Password"
-                android:textSize="16sp"
-                android:textColor="@color/white"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="40dp"/>
-
 
             <!--PASSWORD INPUT BAR-->
             <EditText
                 android:id="@+id/PasswordInputID"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
+                style="@style/MyWidgetEditText"
                 android:hint="@string/EnterYourPassword"
-                android:textSize="16sp"
-                android:textColor="@color/gray_tone"
-                android:textColorHint="@color/gray_tone"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="40dp"
                 android:inputType="textPassword"
-                android:background="@drawable/bg_squircle_input" />
-
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="40dp" />
 
             <!-- FORGOT YOUR PASSWORD CLICKABLE TEXT -->
             <TextView
