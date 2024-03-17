@@ -116,7 +116,22 @@ class AddNewMentor : AppCompatActivity() {
             "imageUrl" to imageUrl
         )
 
-        firestore.collection("mentors").add(mentor).addOnSuccessListener {
+        // Add a new document with a generated ID
+        val newMentorRef = firestore.collection("mentors").document()
+
+        // Start a batch to ensure atomic operations
+        val batch = firestore.batch()
+
+        // Set the mentor document data
+        batch.set(newMentorRef, mentor)
+
+        // Initialize empty subcollections for reviews and bookings with a dummy document
+        val placeholderData = hashMapOf("placeholder" to true)
+        batch.set(newMentorRef.collection("reviews").document("placeholder"), placeholderData)
+        batch.set(newMentorRef.collection("bookings").document("placeholder"), placeholderData)
+
+        // Commit the batch operation
+        batch.commit().addOnSuccessListener {
             // Hide ProgressBar, show success message, and navigate to HomePageActivity
             progressBar.visibility = View.GONE
             Toast.makeText(this, "Mentor added successfully!", Toast.LENGTH_SHORT).show()
@@ -129,6 +144,8 @@ class AddNewMentor : AppCompatActivity() {
                 Toast.makeText(this, "Failed to add mentor: ${it.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

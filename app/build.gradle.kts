@@ -60,6 +60,7 @@ dependencies {
     implementation ("com.google.firebase:firebase-auth:latest_version")
     implementation ("com.google.firebase:firebase-firestore:latest_version")
     implementation ("com.google.firebase:firebase-storage:latest_version")
+    implementation ("com.google.firebase:firebase-firestore:24.10.3")
 
 
 

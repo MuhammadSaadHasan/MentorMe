@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.firestore.FirebaseFirestore
 
 class HomePageActivity : AppCompatActivity() {
 
@@ -36,52 +37,49 @@ class HomePageActivity : AppCompatActivity() {
     }
 
     private fun fetchMentorsData() {
-        // TODO: Fetch mentors' data from Firebase and then call displayMentors() with the data
-        val mentorsList = listOf(
-            Mentor("Saad Man", "UX Designer at Google", "$1500/session", false, "profile_image_url", false) ,
+        val db = FirebaseFirestore.getInstance()
 
-            Mentor("What is love", "Baby dont hurtme", "$6900/session", true, "profile_image_url", true),
-
-            Mentor("What is love", "Baby dont hurtme", "$6900/session", true, "profile_image_url", true)
-        // Add more mentors as needed...
-        )
-        displayMentors(mentorsList)
+        db.collection("mentors")
+            .get()
+            .addOnSuccessListener { result ->
+                val mentorsList = result.mapNotNull { document ->
+                    Mentor(
+                        name = document.getString("name") ?: "N/A",
+                        description = document.getString("description") ?: "N/A",
+                        price = document.getLong("price")?.toString() ?: "N/A",
+                        imageUrl = document.getString("imageUrl") ?: "N/A",
+                        status = document.getString("status") ?: "N/A"
+                    )
+                }
+                displayMentors(mentorsList)
+            }
+            .addOnFailureListener { exception ->
+                println("Error fetching mentors: ${exception.localizedMessage}")
+            }
     }
 
     private fun displayMentors(mentorsList: List<Mentor>) {
         val mentorsContainer = findViewById<LinearLayout>(R.id.mentorsContainer)
+        mentorsContainer.removeAllViews() // Clear previous views
         mentorsList.forEach { mentor ->
-            val mentorCardView = layoutInflater.inflate(R.layout.mentor_card_layout, mentorsContainer, false).apply {
-                findViewById<TextView>(R.id.tvMentorName).text = mentor.name
-                findViewById<TextView>(R.id.tvMentorTitle).text = mentor.title
-                findViewById<TextView>(R.id.tvMentorSessionRate).text = mentor.sessionRate
-                // ... Other views setup ...
-            }
+            val mentorCardView = layoutInflater.inflate(R.layout.mentor_card_layout, mentorsContainer, false)
+            mentorCardView.findViewById<TextView>(R.id.tvMentorName).text = mentor.name
+            mentorCardView.findViewById<TextView>(R.id.tvMentorTitle).text = mentor.description
+            mentorCardView.findViewById<TextView>(R.id.tvMentorSessionRate).text = mentor.price
 
-            val heartIcon = mentorCardView.findViewById<ImageView>(R.id.ivHeartIcon)
-            updateHeartIcon(heartIcon, mentor.hearted)
-
-            heartIcon.setOnClickListener {
-                // Toggle the hearted state and update Firebase
-                mentor.hearted = !mentor.hearted
-                updateHeartIcon(heartIcon, mentor.hearted)
-                // TODO: Update the mentor's hearted state in Firebase
-            }
+            // Load image using a library like Glide or Picasso
 
             mentorsContainer.addView(mentorCardView)
         }
     }
 
-    private fun updateHeartIcon(heartIcon: ImageView, isHearted: Boolean) {
-        heartIcon.setImageResource(if (isHearted) R.drawable.red_heart else R.drawable.grey_heart)
-    }
 }
 
 data class Mentor(
-    val name: String,
-    val title: String,
-    val sessionRate: String,
-    val isAvailable: Boolean,
-    val profileImage: String, // URL to the image
-    var hearted: Boolean // To keep track if the mentor is 'hearted'
+    val description: String = "",
+    val imageUrl: String = "", // URL to the image
+    val name: String = "",
+    val price: String = "",
+    val status: String = "" // Assuming status is a string like "Available" or "Unavailable"
 )
+

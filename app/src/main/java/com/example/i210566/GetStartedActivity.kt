@@ -75,24 +75,50 @@ class GetStartedActivity : AppCompatActivity() {
     }
 
     private fun storeUserDetails(userId: String, name: String, email: String, contactNumber: String, country: String, city: String) {
-        val userDetails = hashMapOf(
+        val user = hashMapOf(
             "name" to name,
             "email" to email,
-            "contactNumber" to contactNumber,
+            "contact" to contactNumber,
             "country" to country,
-            "city" to city
+            "city" to city,
+            "profilePhoto" to "", // Start with empty string or default URL
+            "profileCover" to "", // Start with empty string or default URL
+            "heartedMentors" to listOf<String>()
+            // Any other fields you want to initialize
         )
 
-        firestore.collection("users")
-            .document(userId)
-            .set(userDetails)
+        // Save the user document
+        firestore.collection("users").document(userId)
+            .set(user)
             .addOnSuccessListener {
-                Toast.makeText(this, "User details saved successfully", Toast.LENGTH_SHORT).show()
+                Log.d("GetStartedActivity", "User details saved successfully")
+                // Initialize subcollections if needed. Here, we simply log success.
+                initializeSubcollections(userId, listOf("chats", "bookings", "notifications", "reviews"))
+                // Proceed to next activity or flow
             }
             .addOnFailureListener { e ->
-                Log.e("GetStartedActivity", "Failed to save user details", e)
-                Toast.makeText(this, "Failed to save user details: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
+                Log.e("GetStartedActivity", "Error writing document", e)
             }
+    }
+
+    private fun initializeSubcollections(userId: String, subcollections: List<String>) {
+        subcollections.forEach { subcollection ->
+            val initialData = when (subcollection) {
+                "chats", "bookings", "notifications" -> hashMapOf("placeholder" to true)
+                "reviews" -> hashMapOf("placeholder" to true) // For example, adjust based on your data structure
+                else -> hashMapOf("placeholder" to true)
+            }
+            firestore.collection("users").document(userId)
+                .collection(subcollection)
+                .document("initial") // Using "initial" as a placeholder document
+                .set(initialData)
+                .addOnSuccessListener {
+                    Log.d("GetStartedActivity", "Subcollection $subcollection initialized for $userId")
+                }
+                .addOnFailureListener { e ->
+                    Log.e("GetStartedActivity", "Error initializing $subcollection for $userId", e)
+                }
+        }
     }
 
 }
