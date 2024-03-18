@@ -210,4 +210,7 @@ principles and user experience.</string>
     </string-array>
 
 
+    <string name="hi_user">Hi, %1$s!</string>
+
+
 </resources>

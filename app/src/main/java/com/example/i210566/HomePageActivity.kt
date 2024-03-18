@@ -1,85 +1,85 @@
 package com.example.i210566
-
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 
 class HomePageActivity : AppCompatActivity() {
 
+    private lateinit var mentorsRecyclerView: RecyclerView
+    private lateinit var adapter: MentorAdapter
+    private val mentorsList = mutableListOf<MentorData>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
-
         setupBottomNavigationView()
+
+        setupMentorsRecyclerView()
         fetchMentorsData()
     }
 
-    private fun setupBottomNavigationView() {
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.setOnItemSelectedListener { item ->
-            val intent = when (item.itemId) {
-                R.id.nav_search -> Intent(this, LetsFindActivity::class.java)
-                R.id.nav_plus -> Intent(this, AddNewMentor::class.java)
-                R.id.nav_chat -> Intent(this, Chats::class.java)
-                R.id.nav_home -> Intent(this, HomePageActivity::class.java)
-                else -> null
-            }
-            intent?.let { startActivity(it) }
-            true
-        }
+    private fun setupMentorsRecyclerView() {
+        mentorsRecyclerView = findViewById(R.id.mentorsRecyclerView)
+        mentorsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        adapter = MentorAdapter(mentorsList)
+        mentorsRecyclerView.adapter = adapter
     }
 
     private fun fetchMentorsData() {
-        val db = FirebaseFirestore.getInstance()
+        val firestore = FirebaseFirestore.getInstance()
+        val mentorsCollection = firestore.collection("mentors")
 
-        db.collection("mentors")
-            .get()
+        mentorsCollection.get()
             .addOnSuccessListener { result ->
-                val mentorsList = result.mapNotNull { document ->
-                    Mentor(
-                        name = document.getString("name") ?: "N/A",
-                        description = document.getString("description") ?: "N/A",
-                        price = document.getLong("price")?.toString() ?: "N/A",
-                        imageUrl = document.getString("imageUrl") ?: "N/A",
-                        status = document.getString("status") ?: "N/A"
-                    )
+                mentorsList.clear()
+                for (document in result) {
+                    val mentor = document.toObject(MentorData::class.java)
+                    mentorsList.add(mentor)
+                    // Show Toast with mentor data
+                    val mentorInfo = "Name: ${mentor.name}, Description: ${mentor.description}"
+                    Toast.makeText(this@HomePageActivity, mentorInfo, Toast.LENGTH_LONG).show()
                 }
-                displayMentors(mentorsList)
+                adapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->
-                println("Error fetching mentors: ${exception.localizedMessage}")
+                Toast.makeText(this@HomePageActivity, "Error getting documents: $exception", Toast.LENGTH_LONG).show()
             }
     }
 
-    private fun displayMentors(mentorsList: List<Mentor>) {
-        val mentorsContainer = findViewById<LinearLayout>(R.id.mentorsContainer)
-        mentorsContainer.removeAllViews() // Clear previous views
-        mentorsList.forEach { mentor ->
-            val mentorCardView = layoutInflater.inflate(R.layout.mentor_card_layout, mentorsContainer, false)
-            mentorCardView.findViewById<TextView>(R.id.tvMentorName).text = mentor.name
-            mentorCardView.findViewById<TextView>(R.id.tvMentorTitle).text = mentor.description
-            mentorCardView.findViewById<TextView>(R.id.tvMentorSessionRate).text = mentor.price
 
-            // Load image using a library like Glide or Picasso
 
-            mentorsContainer.addView(mentorCardView)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private fun setupBottomNavigationView() {
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_search -> startActivity(Intent(this, LetsFindActivity::class.java))
+                R.id.nav_plus -> startActivity(Intent(this, AddNewMentor::class.java))
+                R.id.nav_chat -> startActivity(Intent(this, Chats::class.java))
+                R.id.nav_home -> {} // Current activity, do nothing
+            }
+            true
         }
     }
-
 }
-
-data class Mentor(
-    val description: String = "",
-    val imageUrl: String = "", // URL to the image
-    val name: String = "",
-    val price: String = "",
-    val status: String = "" // Assuming status is a string like "Available" or "Unavailable"
-)
-

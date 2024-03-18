@@ -38,7 +38,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" 
+            android:orientation="horizontal"
             android:layout_marginTop="70dp"
             android:layout_marginStart="18dp">
 
@@ -53,10 +53,14 @@
                 android:textColor="@color/white" />
 
             <ImageView
+                android:id="@+id/imageViewProfile"
                 android:layout_width="137dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/cooperpfp" />
+
+
+
 
         </LinearLayout>
 
@@ -122,61 +126,57 @@
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/exppertieseincudeiD"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/MyExpertise"
-            android:textColor="@color/Dark_teal"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="450dp"
-            android:textStyle="bold"
-            android:textSize="20sp" />
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="410dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/exppertieseincudeiD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MyExpertise"
+                android:textColor="@color/Dark_teal"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/careeradviceID"
+                    android:text="@string/CareerAdvice" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/useexperiencedesignID"
+                    android:text="@string/UserExperience" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/leadershipID"
+                    android:text="@string/Leadership" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/prototypingID"
+                    android:text="@string/Leadership" />
+
+<!--
+                style="@style/ExpertiseButtonStyle"
+-->
+
+            </GridLayout>
+
+        </LinearLayout>
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/careeradviceID"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="500dp"
-            android:layout_marginStart="25dp"
-            android:textSize="13sp"
-            android:background="@drawable/expertiesebackground"
-            android:text="@string/CareerAdvice"
-            android:textColor="@color/white" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/useexperiencedesignID"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:textSize="13sp"
-            android:layout_marginTop="500dp"
-            android:layout_marginStart="190dp"
-            android:background="@drawable/expertiesebackground"
-            android:text="@string/UserExperience"
-            android:textColor="@color/white" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/leadershipID"
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:textSize="13sp"
-            android:layout_marginTop="550dp"
-            android:layout_marginStart="25dp"
-            android:background="@drawable/expertiesebackground"
-            android:text="@string/Leadership"
-            android:textColor="@color/white" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/prototypingID"
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:textSize="13sp"
-            android:layout_marginTop="550dp"
-            android:layout_marginStart="160dp"
-            android:background="@drawable/expertiesebackground"
-            android:text="@string/Leadership"
-            android:textColor="@color/white" />
 
 
         <LinearLayout
@@ -214,9 +214,8 @@
 
 
 
-        <!-- Reset BUTTON -->
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/ResetButtonID"
+            android:id="@+id/BookButton"
             android:layout_width="310dp"
             android:layout_height="50dp"
             android:layout_marginStart="24dp"

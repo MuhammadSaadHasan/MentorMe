@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("kotlin-kapt")
+
 
 }
 
@@ -61,6 +63,14 @@ dependencies {
     implementation ("com.google.firebase:firebase-firestore:latest_version")
     implementation ("com.google.firebase:firebase-storage:latest_version")
     implementation ("com.google.firebase:firebase-firestore:24.10.3")
+    implementation ("com.github.bumptech.glide:glide:latest_version")
+    annotationProcessor ("com.github.bumptech.glide:compiler:latest_version")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+    implementation ("com.google.firebase:firebase-firestore-ktx")
+    implementation ("com.github.bumptech.glide:glide:latest_version")
+    annotationProcessor ("com.github.bumptech.glide:compiler:latest_version")
+    kapt ("com.github.bumptech.glide:compiler:4.12.0")
 
 
 

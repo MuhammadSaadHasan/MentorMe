@@ -14,43 +14,46 @@ import java.util.concurrent.TimeUnit
 class VerifyPhoneNumberActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private var verificationId: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify_phone_number)
 
-        auth = FirebaseAuth.getInstance()
+        /*auth = FirebaseAuth.getInstance()
 
         val buttonBack: ImageButton = findViewById(R.id.back)
         buttonBack.setOnClickListener {
-            val intent = Intent(this, GetStartedActivity::class.java)
-            startActivity(intent)
-            finish()
+            finish() // Just finish current activity, no need to create new intent for previous activity
         }
 
-        val phoneNumber = intent.getStringExtra("phoneNumber") // Pass the phone number from the previous Activity
+        val phoneNumber = intent.getStringExtra("phoneNumber") ?: run {
+            Toast.makeText(this, "Phone number is missing.", Toast.LENGTH_SHORT).show()
+            finish() // Finish activity if phone number is missing
+            return
+        }
         val formattedPhoneNumber = formatPhoneNumberWithCountryCode(phoneNumber)
-        startPhoneNumberVerification(formattedPhoneNumber)
+        if (formattedPhoneNumber.isNotBlank()) {
+            startPhoneNumberVerification(formattedPhoneNumber)
+        } else {
+            Toast.makeText(this, "Invalid phone number.", Toast.LENGTH_SHORT).show()
+        }*/
     }
 
     private fun formatPhoneNumberWithCountryCode(phoneNumber: String?): String {
-        // Check if the phone number is not null and does not already start with "+92"
-        if (phoneNumber != null && !phoneNumber.startsWith("+92")) {
-            return "+92$phoneNumber"
+        return if (phoneNumber != null && !phoneNumber.startsWith("+92")) {
+            "+92$phoneNumber"
+        } else {
+            phoneNumber ?: ""
         }
-        return phoneNumber ?: "" // Return the original number if it's null or already formatted
     }
 
-    private fun startPhoneNumberVerification(phoneNumber: String?) {
-        phoneNumber?.let {
-            PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                it, // Phone number to verify
-                60, // Timeout duration
-                TimeUnit.SECONDS, // Unit of timeout
-                this, // Activity (for callback binding)
-                callbacks) // OnVerificationStateChangedCallbacks
-        }
+    private fun startPhoneNumberVerification(phoneNumber: String) {
+        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+            phoneNumber, // Phone number to verify
+            60, // Timeout duration
+            TimeUnit.SECONDS, // Unit of timeout
+            this, // Activity (for callback binding)
+            callbacks) // OnVerificationStateChangedCallbacks
     }
 
     private val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
@@ -63,8 +66,10 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
         }
 
         override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
-            this@VerifyPhoneNumberActivity.verificationId = verificationId
-            // Save verification ID and resending token so you can use them later
+            // Intent to a new Activity where the user can enter the verification code
+            /*val intent = Intent(this@VerifyPhoneNumberActivity, CodeVerificationActivity::class.java)
+            intent.putExtra("verificationId", verificationId)
+            startActivity(intent)*/
         }
     }
 
@@ -72,15 +77,11 @@ class VerifyPhoneNumberActivity : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    val user = task.result?.user
                     Toast.makeText(applicationContext, "Authentication successful.", Toast.LENGTH_SHORT).show()
-                    // Continue to your app's logged-in experience
+                    // Navigate to main part of your application
                 } else {
-                    // Sign in failed, display a message and update the UI
                     Toast.makeText(applicationContext, "Authentication failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
     }
 }
-
