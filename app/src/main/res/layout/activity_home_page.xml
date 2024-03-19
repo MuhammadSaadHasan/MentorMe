@@ -37,49 +37,55 @@
                 android:layout_marginStart="30dp">
 
                 <LinearLayout
-                    android:id="@+id/textViewHelloAliBellicon"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="60dp">
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/textViewHelloAliBellicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/HelloId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Hello"
+                            android:textSize="30sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/HelloUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30sp"
+                            android:textColor="@color/Dark_teal"
+                            android:textStyle="bold"
+                            android:layout_marginStart="5dp"/>
+
+                        <ImageButton
+                            android:id="@+id/bellIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:layout_marginStart="40dp"
+                            android:src="@drawable/bell_icon"/>
+
+                    </LinearLayout>
 
                     <TextView
-                        android:id="@+id/HelloId"
+                        android:id="@+id/ReadyForMentorShip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/Hello"
-                        android:textSize="30sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/NameAli"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Ali"
-                        android:textSize="30sp"
-                        android:textColor="@color/Dark_teal"
-                        android:textStyle="bold"
-                        android:layout_marginStart="5dp"/>
-
-                    <ImageButton
-                        android:id="@+id/bellIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/transparent"
-                        android:src="@drawable/bell_icon"
-                        android:layout_marginStart="190dp" />
+                        android:text="@string/ReadyformentorshipLetsbeginthejourney"
+                        android:textSize="15sp"
+                        android:textColor="@color/Dark_teal"/>
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/ReadyForMentorShip"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ReadyformentorshipLetsbeginthejourney"
-                    android:textSize="15sp"
-                    android:textColor="@color/Dark_teal"
-                    android:layout_marginTop="100dp"/>
 
                 <HorizontalScrollView
                     android:id="@+id/horizontalScrollView"
@@ -142,6 +148,18 @@
             </RelativeLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

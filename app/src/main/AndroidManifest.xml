@@ -37,7 +37,7 @@
             android:name=".DropReview"
             android:exported="false" />
         <activity
-            android:name=".CooperProfile"
+            android:name=".MentorProfile"
             android:exported="false" />
         <activity
             android:name=".LetsFindActivity"

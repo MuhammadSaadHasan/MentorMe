@@ -1,15 +1,12 @@
 package com.example.i210566
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 
 class HomePageActivity : AppCompatActivity() {
@@ -23,6 +20,7 @@ class HomePageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home_page)
         setupBottomNavigationView()
 
+        displayCurrentUserName()
         setupMentorsRecyclerView()
         fetchMentorsData()
     }
@@ -32,6 +30,7 @@ class HomePageActivity : AppCompatActivity() {
         mentorsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         adapter = MentorAdapter(mentorsList)
         mentorsRecyclerView.adapter = adapter
+
     }
 
     private fun fetchMentorsData() {
@@ -44,18 +43,21 @@ class HomePageActivity : AppCompatActivity() {
                 for (document in result) {
                     val mentor = document.toObject(MentorData::class.java)
                     mentorsList.add(mentor)
-                    // Show Toast with mentor data
-                    val mentorInfo = "Name: ${mentor.name}, Description: ${mentor.description}"
-                    Toast.makeText(this@HomePageActivity, mentorInfo, Toast.LENGTH_LONG).show()
                 }
                 adapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->
                 Toast.makeText(this@HomePageActivity, "Error getting documents: $exception", Toast.LENGTH_LONG).show()
             }
+
     }
 
 
+    private fun displayCurrentUserName() {
+        val userNameTextView = findViewById<TextView>(R.id.HelloUserName)
+        val userName = DataManager.currentUser?.name ?: "User"
+        userNameTextView.text = userName
+    }
 
 
 

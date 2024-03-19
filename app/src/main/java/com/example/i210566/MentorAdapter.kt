@@ -15,6 +15,9 @@ class MentorAdapter(private val mentorsList: List<MentorData>) : RecyclerView.Ad
         val textViewSessionRate: TextView = itemView.findViewById(R.id.tvMentorSessionRate)
         val availabilityIndicator: View = itemView.findViewById(R.id.availabilityIndicator)
         val ivHeartIcon: ImageView = itemView.findViewById(R.id.ivHeartIcon)
+
+
+
         // Add more views here if needed
     }
 
@@ -34,6 +37,7 @@ class MentorAdapter(private val mentorsList: List<MentorData>) : RecyclerView.Ad
             // Glide.with(itemView.context).load(mentor.imageUrl).into(ivHeartIcon)
         }
     }
+
 
     override fun getItemCount(): Int = mentorsList.size
 }

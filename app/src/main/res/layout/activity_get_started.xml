@@ -59,14 +59,9 @@
             <!-- GET STARTED LABEL -->
             <TextView
                 android:id="@+id/GetStartedID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LoginGetStartedTextStyle"
                 android:text="@string/GetStarted"
-                android:textSize="30sp"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:layout_marginTop="165dp"
-                android:layout_marginStart="40dp"/>
+                android:layout_marginTop="165dp"/>
 
 
             <!-- NAME LABEL -->

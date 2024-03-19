@@ -52,19 +52,26 @@ class MainActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Once the user is signed in, retrieve their country, city, and phone number from Firestore
+                        // Once the user is signed in, retrieve their user data from Firestore
                         val currentUser = auth.currentUser
                         currentUser?.let { user ->
                             firestore.collection("users").document(user.uid).get()
                                 .addOnSuccessListener { document ->
                                     if (document != null) {
-                                        val country = document.getString("country") ?: "Unknown"
-                                        val city = document.getString("city") ?: "Unknown"
-                                        val phoneNumber = document.getString("phoneNumber") ?: "Unknown"
+                                        // Create a UserData object with the retrieved data
+                                        val userData = document.toObject(UserData::class.java)
 
+                                        // Store the UserData object in DataManager
+                                        DataManager.currentUser = userData
+
+                                        // Now you can use DataManager.currentUser in your app
                                         Toast.makeText(baseContext,
-                                            "Authentication successful.\nCountry: $country\nCity: $city\nPhone: $phoneNumber",
+                                            "Authentication successful.\nWelcome ${DataManager.currentUser?.name}",
                                             Toast.LENGTH_LONG).show()
+
+                                        // Navigate to the HomePageActivity
+                                        startActivity(Intent(this, HomePageActivity::class.java))
+                                        finish()
                                     } else {
                                         Toast.makeText(baseContext,
                                             "Authentication successful but user data not found.",
@@ -76,8 +83,6 @@ class MainActivity : AppCompatActivity() {
                                         "Authentication successful but failed to load user data.",
                                         Toast.LENGTH_SHORT).show()
                                 }
-                            startActivity(Intent(this, HomePageActivity::class.java))
-                            finish()
                         }
                     } else {
                         // If sign in fails, display a message to the user.
@@ -88,4 +93,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Email and password cannot be empty", Toast.LENGTH_SHORT).show()
         }
     }
+
+
+
 }
