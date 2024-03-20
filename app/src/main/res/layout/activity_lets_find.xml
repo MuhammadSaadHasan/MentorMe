@@ -59,11 +59,12 @@
                 android:layout_height="40dp"
                 android:hint="@string/Search"
                 android:inputType="text"
+                android:imeOptions="actionSearch"
                 android:background="@drawable/search_bar_background"
                 android:drawableStart="@drawable/drawable_start_search"
                 android:drawablePadding="10dp"
                 android:paddingStart="16dp"
-            android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"/>
 
 
             <TextView
@@ -75,6 +76,9 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/Dark_teal" />
+
+
+
 
 
 
@@ -110,60 +114,16 @@
             </RelativeLayout>
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/Recent2ID"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Mentor2"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="20dp"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-
-                <ImageButton
-                    android:id="@+id/XIcon2"
-                    android:layout_width="13dp"
-                    android:layout_height="13dp"
-                    android:src="@drawable/drwable_end_xx"
-                    android:background="@color/transparent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="22dp"
-                    android:layout_marginEnd="16dp" />
-
-            </RelativeLayout>
 
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/Recent3ID"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Mentor3"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="20dp"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
 
-                <ImageButton
-                    android:id="@+id/XIcon3"
-                    android:layout_width="13dp"
-                    android:layout_height="13dp"
-                    android:src="@drawable/drwable_end_xx"
-                    android:background="@color/transparent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="22dp"
-                    android:layout_marginEnd="16dp" />
 
-            </RelativeLayout>
+
+
+
+
+
 
             <!-- letts find -->
             <TextView
@@ -174,7 +134,7 @@
                 android:textSize="25sp"
                 android:textColor="@color/Dark_teal"
                 android:textStyle="bold"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="110dp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"

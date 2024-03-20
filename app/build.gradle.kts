@@ -71,6 +71,7 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:latest_version")
     annotationProcessor ("com.github.bumptech.glide:compiler:latest_version")
     kapt ("com.github.bumptech.glide:compiler:4.12.0")
+    implementation ("androidx.fragment:fragment-ktx:1.6.2")
 
 
 

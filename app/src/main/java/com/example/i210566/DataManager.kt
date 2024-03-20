@@ -3,6 +3,7 @@ package com.example.i210566
 
 object DataManager {
     var currentUser: UserData? = null
+    var currentMentor: MentorData? = null
 }
 
 data class MentorData(

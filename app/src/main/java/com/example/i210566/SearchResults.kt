@@ -1,27 +1,26 @@
 package com.example.i210566
+
 import android.content.Intent
-import android.os.Bundle
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
+import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
 
-class HomePageActivity : AppCompatActivity() {
-
-    private lateinit var mentorsRecyclerView: RecyclerView
-    private lateinit var adapter: MentorAdapter
+class SearchResults : AppCompatActivity() {
+    private lateinit var mentorSearchRecyclerView: RecyclerView
+    private lateinit var adapter: SearchMentorAdapter
     private val mentorsList = mutableListOf<MentorData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_page)
+        setContentView(R.layout.activity_search_results)
         setupBottomNavigationView()
 
-        displayCurrentUserName()
+        Toast.makeText(this, "Reached", Toast.LENGTH_LONG).show()
+
         setupMentorsRecyclerView()
         fetchMentorsData()
 
@@ -29,11 +28,12 @@ class HomePageActivity : AppCompatActivity() {
     }
 
 
+
     private fun setupMentorsRecyclerView() {
-        mentorsRecyclerView = findViewById(R.id.mentorsRecyclerView)
-        mentorsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        adapter = MentorAdapter(mentorsList)
-        mentorsRecyclerView.adapter = adapter
+        mentorSearchRecyclerView = findViewById(R.id.mentorSearchRecyclerView)
+        mentorSearchRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        adapter = SearchMentorAdapter(mentorsList)
+        mentorSearchRecyclerView.adapter = adapter
 
     }
 
@@ -51,17 +51,13 @@ class HomePageActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this@HomePageActivity, "Error getting documents: $exception", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@SearchResults, "Error getting documents: $exception", Toast.LENGTH_LONG).show()
             }
 
     }
 
 
-    private fun displayCurrentUserName() {
-        val userNameTextView = findViewById<TextView>(R.id.HelloUserName)
-        val userName = DataManager.currentUser?.name ?: "User"
-        userNameTextView.text = userName
-    }
+
 
 
 
@@ -77,4 +73,5 @@ class HomePageActivity : AppCompatActivity() {
             true
         }
     }
+
 }

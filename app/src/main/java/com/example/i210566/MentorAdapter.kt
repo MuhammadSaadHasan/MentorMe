@@ -1,5 +1,6 @@
 package com.example.i210566
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,10 +16,6 @@ class MentorAdapter(private val mentorsList: List<MentorData>) : RecyclerView.Ad
         val textViewSessionRate: TextView = itemView.findViewById(R.id.tvMentorSessionRate)
         val availabilityIndicator: View = itemView.findViewById(R.id.availabilityIndicator)
         val ivHeartIcon: ImageView = itemView.findViewById(R.id.ivHeartIcon)
-
-
-
-        // Add more views here if needed
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MentorViewHolder {
@@ -32,12 +29,9 @@ class MentorAdapter(private val mentorsList: List<MentorData>) : RecyclerView.Ad
             textViewName.text = mentor.name
             textViewDescription.text = mentor.description
             textViewSessionRate.text = mentor.price.toString()
-
-            // Example using Glide to load images:
-            // Glide.with(itemView.context).load(mentor.imageUrl).into(ivHeartIcon)
+            
         }
     }
-
 
     override fun getItemCount(): Int = mentorsList.size
 }
