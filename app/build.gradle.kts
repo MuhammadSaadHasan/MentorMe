@@ -72,7 +72,8 @@ dependencies {
     annotationProcessor ("com.github.bumptech.glide:compiler:latest_version")
     kapt ("com.github.bumptech.glide:compiler:4.12.0")
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
-
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 
 
 }

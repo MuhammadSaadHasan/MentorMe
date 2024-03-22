@@ -1,10 +1,10 @@
 package com.example.i210566
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -12,58 +12,46 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class HomePageActivity : AppCompatActivity() {
 
-    private lateinit var mentorsRecyclerView: RecyclerView
-    private lateinit var adapter: MentorAdapter
-    private val mentorsList = mutableListOf<MentorData>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
+
+        initRecyclerView()
+        loadDataFromFirestore() // Make sure to call this method to load data
+
         setupBottomNavigationView()
-
         displayCurrentUserName()
-        setupMentorsRecyclerView()
-        fetchMentorsData()
-
-
     }
 
-
-    private fun setupMentorsRecyclerView() {
-        mentorsRecyclerView = findViewById(R.id.mentorsRecyclerView)
-        mentorsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        adapter = MentorAdapter(mentorsList)
-        mentorsRecyclerView.adapter = adapter
-
+    private fun initRecyclerView() {
+        val recyclerView = findViewById<RecyclerView>(R.id.mentorsRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        // The adapter will be set after data is loaded from Firestore
     }
 
-    private fun fetchMentorsData() {
-        val firestore = FirebaseFirestore.getInstance()
-        val mentorsCollection = firestore.collection("mentors")
-
-        mentorsCollection.get()
-            .addOnSuccessListener { result ->
-                mentorsList.clear()
-                for (document in result) {
+    private fun loadDataFromFirestore() {
+        val db = FirebaseFirestore.getInstance()
+        db.collection("mentors") // Replace "mentors" with your actual collection name
+            .get()
+            .addOnSuccessListener { documents ->
+                val mentorsList = ArrayList<MentorData>() // Use MentorData
+                for (document in documents) {
                     val mentor = document.toObject(MentorData::class.java)
                     mentorsList.add(mentor)
                 }
-                adapter.notifyDataSetChanged()
+                val adapter = HomePageMentorCardAdapter(mentorsList)
+                findViewById<RecyclerView>(R.id.mentorsRecyclerView).adapter = adapter
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this@HomePageActivity, "Error getting documents: $exception", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Error getting documents: $exception", Toast.LENGTH_SHORT).show()
             }
-
     }
-
 
     private fun displayCurrentUserName() {
         val userNameTextView = findViewById<TextView>(R.id.HelloUserName)
         val userName = DataManager.currentUser?.name ?: "User"
         userNameTextView.text = userName
     }
-
-
 
     private fun setupBottomNavigationView() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)

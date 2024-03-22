@@ -1,5 +1,7 @@
 package com.example.i210566
 
+import java.io.Serializable
+
 
 object DataManager {
     var currentUser: UserData? = null
