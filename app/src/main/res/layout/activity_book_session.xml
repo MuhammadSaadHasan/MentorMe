@@ -8,7 +8,6 @@
     tools:context=".BookSession">
 
 
-
     <!-- BLUE BACKGROUND-->
     <View
         android:id="@+id/blueBackground"
@@ -35,7 +34,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/hiJohncooperid"
+                    android:id="@+id/MentorNameID"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -45,6 +44,7 @@
                     android:textColor="@color/white" />
 
                 <ImageView
+                    android:id="@+id/MentorPicID"
                     android:layout_width="137dp"
                     android:layout_height="150dp"
                     android:src="@drawable/cooperpfp" />
@@ -79,6 +79,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/SessionPriceID"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Session1500"

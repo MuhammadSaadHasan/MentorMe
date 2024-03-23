@@ -9,12 +9,13 @@ object DataManager {
 }
 
 data class MentorData(
+    var Documentid: String? = null,
     var description: String? = null,
     var imageUrl: String? = null,
     var name: String? = null,
     var price: Long? = null,
     var status: String? = null
-)
+) : Serializable
 
 
 data class UserData(

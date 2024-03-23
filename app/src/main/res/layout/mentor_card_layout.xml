@@ -6,7 +6,7 @@
     style="@style/MentorCard">
 
     <ImageView
-        android:id="@+id/Mentor1"
+        android:id="@+id/ivMentorImage"
         style="@style/MentorImage" />
 
 

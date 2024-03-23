@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This FrameLayout will wrap the LinearLayout to control the background size -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mentorSearchFrameID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="30dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- ImageButton with specified source image -->
+        <ImageButton
+            android:id="@+id/ivMentorSearchProfilePic"
+            android:layout_width="140dp"
+            android:layout_height="140dp" />
+
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            style="@style/MentorSearchCard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvMentorSearchName"
+                    style="@style/MentorNameStyle"
+                    android:text="Name" />
+
+                <TextView
+                    android:id="@+id/tvMentorSearchSessionRate"
+                    style="@style/MentorSessionRateStyle"
+                    android:text="Session Rate" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvMentorSearchTitle"
+                style="@style/MentorTitleStyle"
+                android:text="Title" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <View
+                    android:id="@+id/SearchAvailabilityIndicator"
+                    style="@style/AvailabilityIndicator" />
+
+                <TextView
+                    android:text="@string/Available"
+                    style="@style/AvailabilityTextViewStyle" />
+
+                <ImageView
+                    android:id="@+id/ivSearchHeartIcon"
+                    style="@style/HeartIconStyle" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

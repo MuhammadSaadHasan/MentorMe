@@ -15,14 +15,31 @@ class LetsFindActivity : AppCompatActivity() {
 
         setupBottomNavigationView()
 
-
+        setupSearchBar()
     }
 
 
 
 
 
+    private fun setupSearchBar() {
+        val searchBar = findViewById<EditText>(R.id.searchBarID)
+        searchBar.setOnEditorActionListener { textView, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                performSearch(textView.text.toString())
+                true
+            } else {
+                false
+            }
+        }
+    }
 
+    private fun performSearch(query: String) {
+        val intent = Intent(this, SearchResults::class.java).apply {
+            putExtra("SEARCH_QUERY", query)
+        }
+        startActivity(intent)
+    }
 
 
 

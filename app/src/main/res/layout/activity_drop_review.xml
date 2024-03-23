@@ -94,40 +94,16 @@
 
 
 
-        <LinearLayout
+        <RatingBar
+            android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="520dp"
-            xmlns:android="http://schemas.android.com/apk/res/android">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/star_shape"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/star_shape"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/star_shape"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/star_shape"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/star_shape"/>
-        </LinearLayout>
-
+            android:layout_marginTop="530dp"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="0.5"
+            android:isIndicator="false"/>
 
 
         <!-- Reset BUTTON -->

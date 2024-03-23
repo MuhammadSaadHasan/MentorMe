@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile">
+
+    <ImageView
+        android:id="@+id/ProfileBackGround"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/background" />
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayut1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ProfileBackGround"
+        android:layout_marginTop="-50dp">
+
+        <ImageView
+            android:id="@+id/Userpfp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:src="@drawable/mrbeast" />
+
+        <TextView
+            android:id="@+id/UserNameID"
+            style="@style/TopMentorsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayut1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BookedSessionsID"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="130dp"
+            android:background="@drawable/yellowbuttonbackground"
+            android:text="Booked Sessions"
+            android:textColor="@color/Dark_teal"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/FavourtMentorTextViewID"
+            style="@style/TopMentorsTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_height="wrap_content"
+            android:text="Favorite Mentors" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/FavoutieMentorsRecylerViewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/mentor_card_layout"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/MyReviewaTextViewID"
+            style="@style/TopMentorsTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_height="wrap_content"
+            android:text="My Reviews" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

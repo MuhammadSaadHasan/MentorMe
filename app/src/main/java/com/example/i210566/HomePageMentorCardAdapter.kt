@@ -10,51 +10,27 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+
 // import your Glide or Picasso library here if you're planning to use it for image loading
 
 class HomePageMentorCardAdapter(private val mentorsList: List<MentorData>) : RecyclerView.Adapter<HomePageMentorCardAdapter.MentorViewHolder>() {
 
     class MentorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(mentor: MentorData) {
-            val tvMentorName = itemView.findViewById<TextView>(R.id.tvMentorName)
-            val tvMentorSessionRate = itemView.findViewById<TextView>(R.id.tvMentorSessionRate)
-            val tvMentorTitle = itemView.findViewById<TextView>(R.id.tvMentorTitle)
-            val ivMentorImage = itemView.findViewById<ImageView>(R.id.Mentor1) // Assuming you have an ImageView for the mentor's image
+        private val tvMentorName: TextView = itemView.findViewById(R.id.tvMentorName)
+        private val tvMentorSessionRate: TextView = itemView.findViewById(R.id.tvMentorSessionRate)
+        private val tvMentorTitle: TextView = itemView.findViewById(R.id.tvMentorTitle)
+        //private val ivMentorImage: ImageView = itemView.findViewById(R.id.ivMentorImage)
 
+        fun bind(mentor: MentorData, onClick: (MentorData) -> Unit) {
             tvMentorName.text = mentor.name
             tvMentorSessionRate.text = mentor.price?.toString() ?: "N/A"
             tvMentorTitle.text = mentor.description
-
-            // Example of loading an image using Glide (you need to add the library to your build.gradle)
-            mentor.imageUrl?.let {
-                Glide.with(itemView.context)
-                    .load(it)
-                    .into(ivMentorImage)
-            }
-
+            //mentor.imageUrl?.let { imageUrl -> Glide.with(itemView.context).load(imageUrl).into(ivMentorImage) }
 
             itemView.setOnClickListener {
-                val context = itemView.context
-                // Check if context is an instance of Activity and if it is not finishing
-                if (context is Activity && !context.isFinishing) {
-                    try {
-                        val intent = Intent(context, MentorProfile::class.java) // Ensure this class exists and is declared in the manifest
-                        intent.putExtra("EXTRA_MENTOR_NAME", mentor.name)
-                        context.startActivity(intent)
-                    } catch (e: Exception) {
-                        Toast.makeText(context, "Failed to start activity: ${e.message}", Toast.LENGTH_LONG).show()
-                        e.printStackTrace() // This will print the stack trace to the log
-                    }
-                } else {
-                    Toast.makeText(context, "Context is not valid or the Activity is finishing", Toast.LENGTH_LONG).show()
-                }
+                onClick(mentor)
             }
-
-
         }
-
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MentorViewHolder {
@@ -63,8 +39,13 @@ class HomePageMentorCardAdapter(private val mentorsList: List<MentorData>) : Rec
     }
 
     override fun onBindViewHolder(holder: MentorViewHolder, position: Int) {
-        holder.bind(mentorsList[position])
+        holder.bind(mentorsList[position]) {
+            val intent = Intent(holder.itemView.context, MentorProfile::class.java).apply {
+                putExtra("EXTRA_MENTOR_DATA", it)
+            }
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
-    override fun getItemCount() = mentorsList.size
+    override fun getItemCount(): Int = mentorsList.size
 }
