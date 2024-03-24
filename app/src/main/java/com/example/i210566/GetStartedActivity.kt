@@ -76,6 +76,7 @@ class GetStartedActivity : AppCompatActivity() {
 
     private fun storeUserDetails(userId: String, name: String, email: String, contactNumber: String, country: String, city: String) {
         val user = hashMapOf(
+            "userId" to userId,
             "name" to name,
             "email" to email,
             "contact" to contactNumber,

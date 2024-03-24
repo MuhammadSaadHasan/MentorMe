@@ -19,6 +19,7 @@ data class MentorData(
 
 
 data class UserData(
+    var userId: String? = null,
     var city: String? = null,
     var contact: String? = null,
     var country: String? = null,
@@ -27,4 +28,11 @@ data class UserData(
     var profileCover: String? = null,
     var profilePhoto: String? = null,
     var heartedMentors: List<String>? = null
+)
+
+data class ReviewData(
+    var userId: String? = null,
+    var mentorName: String? = null,
+    var rating: Double? = null,
+    var experience: String? = null
 )

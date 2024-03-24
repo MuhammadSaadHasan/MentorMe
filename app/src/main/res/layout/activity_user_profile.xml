@@ -25,18 +25,44 @@
         app:layout_constraintTop_toBottomOf="@id/ProfileBackGround"
         android:layout_marginTop="-50dp">
 
+
+
+
         <ImageView
             android:id="@+id/Userpfp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             tools:src="@drawable/mrbeast" />
 
-        <TextView
-            android:id="@+id/UserNameID"
-            style="@style/TopMentorsTextView"
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UserName" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/UserNameID"
+                style="@style/TopMentorsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UserName" />
+
+            <ImageButton
+                android:id="@+id/EditIconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit_icon"/>
+
+            <ImageButton
+                android:id="@+id/EditUserInfoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/edit_icon"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -57,6 +83,7 @@
             android:textSize="13sp"
             android:textStyle="bold" />
 
+
         <TextView
             android:id="@+id/FavourtMentorTextViewID"
             style="@style/TopMentorsTextView"
@@ -75,6 +102,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginStart="15dp"/>
 
+
         <TextView
             android:id="@+id/MyReviewaTextViewID"
             style="@style/TopMentorsTextView"
@@ -83,6 +111,19 @@
             android:layout_height="wrap_content"
             android:text="My Reviews" />
 
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/MyReviewasRecyclerViewDisplayed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/my_reviews_card_layout"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"/>
+
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

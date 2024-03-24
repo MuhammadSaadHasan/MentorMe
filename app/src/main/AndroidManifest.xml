@@ -16,6 +16,12 @@
         android:theme="@style/Theme.I210566"
         tools:targetApi="31">
         <activity
+            android:name=".EditUserInfo"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePFP"
+            android:exported="false" />
+        <activity
             android:name=".UserProfile"
             android:exported="false" />
         <activity

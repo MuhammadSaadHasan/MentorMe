@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dark_teal"
+    tools:context=".EditUserInfo">
+
+
+    <!-- DON'T HAVE ACCOUNT? LOG IN -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/textViewGetStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <!-- GET STARTED LABEL -->
+    <TextView
+        android:id="@+id/GetStartedID"
+        style="@style/LoginGetStartedTextStyle"
+        android:text="@string/GetStarted"
+        android:layout_marginTop="165dp"/>
+
+
+    <!-- NAME LABEL -->
+    <TextView
+        android:id="@+id/NameID"
+        style="@style/MyWidgetTextView"
+        android:text="@string/Name"/>
+
+    <!-- NAME INPUT BAR -->
+    <EditText
+        android:id="@+id/NameInputID"
+        style="@style/MyWidgetEditText"
+        android:hint="@string/EnterName"
+        android:inputType="textPersonName"/>
+
+    <!-- EMAIL LABEL -->
+    <TextView
+        android:id="@+id/EmailID"
+        style="@style/MyWidgetTextView"
+        android:text="@string/Email"/>
+
+    <!-- EMAIL INPUT BAR -->
+    <EditText
+        android:id="@+id/EmailInputID"
+        style="@style/MyWidgetEditText"
+        android:hint="@string/EnterEmail"
+        android:inputType="textEmailAddress"/>
+
+    <!-- CONTACT NUMBER LABEL -->
+    <TextView
+        android:id="@+id/ContactNumberID"
+        style="@style/MyWidgetTextView"
+        android:text="@string/ContactNumber"/>
+
+    <!-- CONTACT NUMBER INPUT BAR -->
+    <EditText
+        android:id="@+id/ContactNumberInputID"
+        style="@style/MyWidgetEditText"
+        android:hint="@string/EnterContactNumber"
+        android:inputType="phone"/>
+
+    <!-- COUNTRY LABEL -->
+    <TextView
+        android:id="@+id/CountryID"
+        style="@style/MyWidgetTextView"
+        android:text="@string/Country"/>
+
+    <!-- COUNTRY SPINNER -->
+    <Spinner
+        android:id="@+id/CountrySpinnerID"
+        style="@style/MyWidgetSpinner"
+        android:entries="@array/country_array"/>
+
+    <!-- CITY LABEL -->
+    <TextView
+        android:id="@+id/CityID"
+        style="@style/MyWidgetTextView"
+        android:text="@string/City"/>
+
+    <!-- CITY SPINNER -->
+    <Spinner
+        android:id="@+id/CitySpinnerID"
+        style="@style/MyWidgetSpinner"
+        android:entries="@array/city_array"/>
+
+
+
+        <!-- SIGN UP BUTTON -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/UpdateButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="UPDTE BUTTON"
+            android:textColor="@color/tealish"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="100dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_squircle_input" />
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -211,6 +211,34 @@
 
 
 
+
+
+
+    <style name="MyReviewsWidget">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:background">@drawable/blue_square_shape</item>
+    </style>
+
+
+    <style name="MyReviewsWidgetMentorNameStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <!-- Style for Mentor's Title TextView -->
+    <style name="TheExperienceReviewWidget">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+
 </resources>
 
 

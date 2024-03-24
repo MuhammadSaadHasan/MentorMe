@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MentorCardLayoutFrameID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivMentorImage"
+            style="@style/MyReviewsWidget"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center" >
+
+            <TextView
+                android:id="@+id/tvMentorName"
+                style="@style/MyReviewsWidgetMentorNameStyle"
+                android:text="Name"
+                android:layout_gravity="center_horizontal" />
+
+            <RatingBar
+                android:id="@+id/userRatingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:isIndicator="true"/>
+
+            <TextView
+                android:id="@+id/MyExperienceWidget"
+                style="@style/TheExperienceReviewWidget"
+                android:text="Title"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+</FrameLayout>
+
+
