@@ -36,3 +36,12 @@ data class ReviewData(
     var rating: Double? = null,
     var experience: String? = null
 )
+
+
+data class Message(
+    val id: String = "",
+    val text: String = "",
+    val fromId: String = "",
+    val toId: String = "",
+    val timestamp: Long = System.currentTimeMillis()
+)

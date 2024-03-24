@@ -50,7 +50,7 @@ class Chats : AppCompatActivity() {
 
     // Method to handle RelativeLayout click
     fun redirectToJohnCoopersDMs(view: View) {
-        val intent = Intent(this, JohnCoopersDMs::class.java)
+        val intent = Intent(this, UserDMs::class.java)
         startActivity(intent)
     }
 }

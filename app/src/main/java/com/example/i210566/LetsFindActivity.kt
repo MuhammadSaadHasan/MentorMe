@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -58,7 +57,7 @@ class LetsFindActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_plus -> startActivity(Intent(this, AddNewMentor::class.java))
-                R.id.nav_chat -> startActivity(Intent(this, JohnCoopersDMs::class.java))
+                R.id.nav_chat -> startActivity(Intent(this, UserDMs::class.java))
                 R.id.nav_home -> {} // Current activity, do nothing
             }
             true

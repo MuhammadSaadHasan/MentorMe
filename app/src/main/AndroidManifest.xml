@@ -43,7 +43,7 @@
             android:name=".Community"
             android:exported="false" />
         <activity
-            android:name=".JohnCoopersDMs"
+            android:name=".UserDMs"
             android:exported="false" />
         <activity
             android:name=".Chats"

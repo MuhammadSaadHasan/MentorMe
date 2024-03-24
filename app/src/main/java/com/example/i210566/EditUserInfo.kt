@@ -38,7 +38,6 @@ class EditUserInfo : AppCompatActivity() {
 
             // Get current user ID
             val userId = FirebaseAuth.getInstance().currentUser?.uid
-            // ... rest of your code
 
             userId?.let { uid ->
                 // Create a map for the data to update
