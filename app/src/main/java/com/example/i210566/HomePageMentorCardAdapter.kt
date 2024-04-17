@@ -26,7 +26,6 @@ class HomePageMentorCardAdapter(private val mentorsList: List<MentorData>) : Rec
             tvMentorSessionRate.text = mentor.price?.toString() ?: "N/A"
             tvMentorTitle.text = mentor.description
             //mentor.imageUrl?.let { imageUrl -> Glide.with(itemView.context).load(imageUrl).into(ivMentorImage) }
-
             itemView.setOnClickListener {
                 onClick(mentor)
             }

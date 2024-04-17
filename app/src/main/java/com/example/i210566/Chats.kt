@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class Chats : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,9 +50,26 @@ class Chats : AppCompatActivity() {
 
     }
 
-    // Method to handle RelativeLayout click
-    fun redirectToJohnCoopersDMs(view: View) {
-        val intent = Intent(this, UserDMs::class.java)
+    fun redirectToChatActivity(view: View) {
+        val intent = Intent(this, ChatActivity::class.java)
+        val receiverUid = "OFtspC5cW4qrUS45gNYf" // Saad's UID from Firebase
+        val senderUid = FirebaseAuth.getInstance().currentUser?.uid
+
+        Toast.makeText(this, senderUid, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, receiverUid, Toast.LENGTH_SHORT).show()
+
+        //
+
+        intent.putExtra("name", "Saad")
+        intent.putExtra("uid", receiverUid)
+
+        // Create chat rooms identifiers
+        val senderRoom = senderUid + receiverUid
+        val receiverRoom = receiverUid + senderUid
+
+        intent.putExtra("senderRoom", senderRoom)
+        intent.putExtra("receiverRoom", receiverRoom)
         startActivity(intent)
     }
+
 }

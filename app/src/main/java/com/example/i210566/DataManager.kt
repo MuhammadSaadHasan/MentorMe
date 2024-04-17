@@ -39,9 +39,13 @@ data class ReviewData(
 
 
 data class Message(
-    val id: String = "",
-    val text: String = "",
-    val fromId: String = "",
-    val toId: String = "",
-    val timestamp: Long = System.currentTimeMillis()
+    var messageId: String = "", // Ensure this field is included
+    var message: String = "",
+    var senderId: String? = null,
+    var receiverId: String? = null,
+    var timestamp: Long = System.currentTimeMillis(),
+    var type: String = "text",
+    var mediaUrl: String? = null
 )
+
+

@@ -61,7 +61,7 @@ dependencies {
     implementation ("com.google.firebase:firebase-auth:latest_version")
     implementation ("com.google.firebase:firebase-firestore:latest_version")
     implementation ("com.google.firebase:firebase-storage:latest_version")
-    implementation ("com.google.firebase:firebase-firestore:24.10.3")
+    implementation ("com.google.firebase:firebase-firestore:24.11.1")
     implementation ("com.github.bumptech.glide:glide:latest_version")
     annotationProcessor ("com.github.bumptech.glide:compiler:latest_version")
     implementation ("com.github.bumptech.glide:glide:4.12.0")
@@ -73,6 +73,10 @@ dependencies {
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
-
+    implementation ("com.google.firebase:firebase-storage-ktx:latest_version")
+    implementation ("com.google.firebase:firebase-messaging:23.4.1")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation ("androidx.test:runner:1.5.2")
+    androidTestImplementation ("androidx.test:rules:1.5.0")
 
 }

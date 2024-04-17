@@ -57,7 +57,7 @@ class LetsFindActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_plus -> startActivity(Intent(this, AddNewMentor::class.java))
-                R.id.nav_chat -> startActivity(Intent(this, UserDMs::class.java))
+                R.id.nav_chat -> startActivity(Intent(this, ChatActivity::class.java))
                 R.id.nav_home -> {} // Current activity, do nothing
             }
             true
