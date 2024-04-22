@@ -9,18 +9,36 @@ MentorMe is an Android application developed with Firebase that aims to connect 
 - **Login:** Users return to their existing account using their credentials.
 - **Logout:** Allows users to securely exit their account.
 
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/396c42b2-7646-43a8-9d72-bbac61810013)
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/0977e168-e22c-431a-8712-39309d0efedd)
+
+
 ### Profile Management
 - **Profile Updates:** Users can update personal information such as their name, contact details, profile picture, and cover photo.
 - **Privacy Settings:** Control who can view their profile and personal information.
+
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/2842f741-e72b-4ff0-b44d-46c8cd8f7f66)
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/4e7040a9-c886-44c4-af68-d041cc08e809)
+
 
 ### Mentor Interaction
 - **Booking Sessions:** Users can book sessions with mentors based on their availability.
 - **Favorites:** Users can add mentors to a favorite list for quicker access in future interactions.
 - **Reviews:** After sessions, users can leave feedback on their experience with mentors.
 
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/9274c2bd-a5c5-4e77-9c81-276dbc1ab562)
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/16339ca6-9a96-4d03-b76a-98e4b95d31a9)
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/47c33e35-854c-446f-9d42-751c8130cd67)
+
+
+
 ### Community Features
 - **One-to-One Chat:** Private messaging feature to communicate directly with mentors.
 - **Community Chat:** Group chat rooms where users can discuss topics and share information.
+
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/55c804fb-345c-4750-917c-c6e98473ede7)
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/d9ee73cc-5fbb-4f52-82f4-4419e0bf6abd)
+
 
 ### Real-Time Updates
 - **Firebase Integration:** Utilizes Firebase for real-time data syncing, ensuring that all user interactions and updates are instant.
@@ -29,6 +47,10 @@ MentorMe is an Android application developed with Firebase that aims to connect 
 ### Enhanced Search
 - **Filters:** Users can search for mentors by specialties, ratings, and availability.
 - **Recent Searches:** Easily revisit previously searched terms.
+
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/7a457d7b-7ac3-47c1-9903-93fca78dff09)
+![image](https://github.com/MuhammadSaadHasan/MentorMe/assets/109513669/a917c214-8cf8-46d9-8c09-48569d8e0419)
+
 
 ### Accessibility and Offline Support
 - **Accessibility:** Implements accessibility features such as text scaling and color contrast to cater to all users.
